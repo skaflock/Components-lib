@@ -59,7 +59,11 @@
                     eval(this.component.plugin);
                 }
             }, 100);
-
+        },
+        methods: {
+            changeView() {
+                this.$forceUpdate();
+            }
         }
     }
 </script>

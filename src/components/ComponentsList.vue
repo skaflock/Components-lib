@@ -1,9 +1,9 @@
 <template>
     <ul class="components-list">
-        <component-view
+        <component-view ref="component"
             v-for="component in components"
-            v-bind:key="component.id"
-            v-bind:component="component"
+            :key="renderControl"
+            :component="component"
         >
         </component-view>
     </ul>
@@ -25,12 +25,23 @@
         props : ["category"],
         data() {
             return {
-                components: null
+                renderControl: 1,
+                components: null,
+                currentCategory: this.category
             }
         },
         mounted() {
-                this.components = componentsList.filter(component => component.tag === this.category);
-                console.log(componentsList)
+            setTimeout(() => {
+                this.currentCategory = this.category;
+                this.components = componentsList.filter(component => component.tag === this.currentCategory);
+            }, 100);
+            this.$watch('category', () => this.renderControl++);
+
+        },
+        methods : {
+            changeItems(category) {
+                    this.components = componentsList.filter(component => component.tag === category);
+            }
         }
     }
 </script>

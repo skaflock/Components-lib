@@ -13,7 +13,7 @@
             </header>
             <Sidebar v-bind:category="currentCategory" @change-category="changeCategory"/>
             <main class="main">
-                <components-list v-bind:category="currentCategory"/>
+                <components-list v-bind:category="currentCategory" ref="componentsList"/>
             </main>
             <footer class="footer">
                 <div class="container">
@@ -28,16 +28,6 @@
     import Sidebar from "./components/Sidebar";
     import ComponentsList from "./components/ComponentsList";
 
-    let tagsList = [];
-    fetch('/components.json')
-        .then(response => response.json())
-        .then(json => {
-            for (const component in json) {
-                tagsList.push(json[component].tag);
-            }
-            tagsList.sort();
-        });
-
     export default {
         name: 'app',
         components: {
@@ -46,14 +36,29 @@
         },
         data() {
             return {
-                categories : tagsList,
-                currentCategory: tagsList[0]
+                categories : [],
+                currentCategory: ''
             }
         },
         methods : {
             changeCategory(category) {
+                this.$refs.componentsList.changeItems(category);
                 return this.currentCategory = category;
             }
+        },
+        created() {
+            fetch('/components.json')
+                .then(response => response.json())
+                .then(json => {
+                    for (const component in json) {
+                        this.categories.push(json[component].tag);
+                    }
+                    this.categories.sort();
+                });
+                setTimeout(() => {
+                    this.currentCategory = this.categories[0];
+                }, 100);
+
         }
     };
 
