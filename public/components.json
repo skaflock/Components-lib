@@ -1,0 +1,30 @@
+{
+  "commonSpoiler" : {
+    "name" : "Обычный спойлер",
+    "tag" : "Спойлеры",
+    "html" : "/html/common-spoiler.html",
+    "scss" : "/styles/common-spoiler.scss",
+    "js" : "/js/commonSpoiler.js",
+    "npmUrl" : "https://www.npmjs.com/package/common-spoiler-svk",
+    "plugin" : ""
+  },
+  "commonTabs" : {
+    "name" : "Обычные табы",
+    "tag" : "Табы",
+    "html" : "/html/common-tab.html",
+    "scss" : "/styles/common-tab.scss",
+    "js" : "/js/commonTab.js",
+    "npmUrl" : "https://www.npmjs.com/package/common-tab-svk",
+    "plugin" : ""
+  },
+  "stepper" : {
+    "name" : "Степпер",
+    "tag" : "Степперы",
+    "html" : "/html/stepper.html",
+    "scss" : "/styles/stepper.scss",
+    "js" : "/js/stepper.js",
+    "npmUrl" : "https://www.npmjs.com/package/common-tab-svk",
+    "plugin" : "$vm.find(\".js-c-stepper\").stepper()"
+  }
+}
+

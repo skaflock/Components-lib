@@ -1,0 +1,52 @@
+/*
+//размеры контейнера
+$xs: 0;
+$sm: 540px;
+$md: 768px;
+$lg: 992px;
+$xl: 1130px;
+$xxl: 1540px;
+
+//точки перехода
+$xs-point: '0';
+$sm-point: '600px';
+$md-point: '808px';
+$lg-point: '1032px';
+$xl-point: '1230px';
+$xxl-point: '1600px';
+*/
+
+//размеры контейнера
+$md: 704px;
+$lg: 820px;
+
+
+//точки перехода
+$xs-point: '0';
+$sm-point: '320px';
+$md-point: '768px';
+$lg-point: '1280px';
+$xl-point: '1680px';
+
+
+$font: 'Arial', sans-serif;
+$rub: 'icomoon';
+
+//цвета
+$c-white: #ffffff;
+$c-black: #000000;
+$c-blue: #0078fe;
+$c-green: #11b267;
+$c-green-light: #4dc58d;
+$c-red: #ff033d;
+$c-grey-light: #f4f4f4;
+$c-grey: #e1e1e1;
+$c-grey-dark: #c1c1c1;
+$c-grey-dark-7: #777777;
+$c-grey-dark-8: #888888;
+$c-grey-blue: #e1eaf5;
+$c-transparent: rgba(0, 0, 0, 0);
+
+//transition
+$transition-3: all 0.3s ease-in-out;
+$transition-5: all 0.5s ease-in-out;

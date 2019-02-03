@@ -1,0 +1,41 @@
+@import "variables";
+.common-tab {
+    &__header {
+        display: flex;
+        height: 30px;
+    }
+    &__link {
+        height: 100%;
+        margin-right: 5px;
+        padding: 0 15px;
+        font-size: 16px;
+        line-height: 30px;
+        border-radius: 4px 4px 0 0;
+        background-color: $c-white;
+        color: $c-black;
+        border: 1px solid currentColor;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        &.current,
+        &:hover {
+            color: $c-white;
+            background-color: $c-black;
+        }
+    }
+    &__content {
+        display: none;
+        height: 300px;
+        pre {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: $c-green;
+            background-color: $c-black;
+        }
+        &.current {
+            display: block;
+        }
+    }
+}
