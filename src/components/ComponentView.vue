@@ -47,7 +47,7 @@
             }
         },
         mounted() {
-            setTimeout(() =>{
+            setTimeout(() => {
                 const $vm = $(this.$el);
                 $vm.find('.js-common-tab').each(function(){
                     $(this).commonTab()
@@ -59,11 +59,6 @@
                     eval(this.component.plugin);
                 }
             }, 100);
-        },
-        methods: {
-            changeView() {
-                this.$forceUpdate();
-            }
         }
     }
 </script>

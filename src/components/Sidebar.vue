@@ -13,23 +13,13 @@
 
 <script>
 
-    let tagsList = [];
-    fetch('/components.json')
-        .then(response => response.json())
-        .then(json => {
-            for (const component in json) {
-                tagsList.push(json[component].tag);
-            }
-            tagsList.sort();
-        });
-
     export default {
         name: "Sidebar",
-        props : ["category"],
+        props : ["category", "categories"],
         data() {
             return {
                 selectedCategoryIndex : 0,
-                tags: tagsList,
+                tags: this.categories,
                 currentCategory: this.category
             }
         },

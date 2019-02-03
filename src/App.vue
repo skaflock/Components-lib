@@ -11,9 +11,15 @@
                     </div>
                 </div>
             </header>
-            <Sidebar v-bind:category="currentCategory" @change-category="changeCategory"/>
+            <sidebar :category="currentCategory"
+                     :categories="categories"
+                     @change-category="changeCategory"
+            />
             <main class="main">
-                <components-list v-bind:category="currentCategory" ref="componentsList"/>
+                <components-list
+                        v-bind:category="currentCategory"
+                        ref="componentsList"
+                />
             </main>
             <footer class="footer">
                 <div class="container">
@@ -54,10 +60,8 @@
                         this.categories.push(json[component].tag);
                     }
                     this.categories.sort();
-                });
-                setTimeout(() => {
                     this.currentCategory = this.categories[0];
-                }, 100);
+                });
 
         }
     };
