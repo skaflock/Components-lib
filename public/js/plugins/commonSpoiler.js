@@ -1,4 +1,3 @@
-import $ from 'jquery'
 /**
  * Common spoiler jQuery plugin
  */

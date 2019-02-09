@@ -1,30 +1,27 @@
 {
   "commonSpoiler" : {
     "name" : "Обычный спойлер",
-    "tag" : "Спойлеры",
+    "category" : "Спойлеры",
     "html" : "/html/common-spoiler.html",
-    "scss" : "/styles/common-spoiler.scss",
-    "js" : "/js/commonSpoiler.js",
-    "npmUrl" : "https://www.npmjs.com/package/common-spoiler-svk",
-    "plugin" : ""
+    "scss" : "/styles/scss/common-spoiler.scss",
+    "js" : "/js/plugins/commonSpoiler.js",
+    "npmUrl" : "https://www.npmjs.com/package/common-spoiler-svk"
   },
   "commonTabs" : {
     "name" : "Обычные табы",
-    "tag" : "Табы",
+    "category" : "Табы",
     "html" : "/html/common-tab.html",
-    "scss" : "/styles/common-tab.scss",
-    "js" : "/js/commonTab.js",
-    "npmUrl" : "https://www.npmjs.com/package/common-tab-svk",
-    "plugin" : ""
+    "scss" : "/styles/scss/common-tab.scss",
+    "js" : "/js/plugins/commonTab.js",
+    "npmUrl" : "https://www.npmjs.com/package/common-tab-svk"
   },
   "stepper" : {
     "name" : "Степпер",
-    "tag" : "Степперы",
+    "category" : "Степперы",
     "html" : "/html/stepper.html",
-    "scss" : "/styles/stepper.scss",
-    "js" : "/js/stepper.js",
-    "npmUrl" : "https://www.npmjs.com/package/common-tab-svk",
-    "plugin" : "$vm.find(\".js-c-stepper\").stepper()"
+    "scss" : "/styles/scss/stepper.scss",
+    "js" : "/js/plugins/stepper.js",
+    "npmUrl" : "https://www.npmjs.com/package/common-tab-svk"
   }
 }
 

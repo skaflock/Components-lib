@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/*
+//размеры контейнера
+$xs: 0;
+$sm: 540px;
+$md: 768px;
+$lg: 992px;
+$xl: 1130px;
+$xxl: 1540px;
+
+//точки перехода
+$xs-point: '0';
+$sm-point: '600px';
+$md-point: '808px';
+$lg-point: '1032px';
+$xl-point: '1230px';
+$xxl-point: '1600px';
+*/
+/*
+	Файл base.scss
+	- Содержит дефолтные стили для элементов.
+*/
+/* -----------------------------------*/
+/* ---------->>>  BASE  <<<-----------*/
+/* -----------------------------------*/
+html {
+  overflow-x: hidden; }
+
+body {
+  font-family: "Arial", sans-serif;
+  background: #ffffff; }
+
+a:focus, img:focus, input:focus, button:focus, textarea:focus {
+  outline: none; }
+
+a:hover {
+  text-decoration: none; }
+
+p {
+  margin-bottom: 0; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 1;
+  color: #000000;
+  font-weight: 700; }
+  @media (max-width: 320px) {
+    h1 {
+      margin-bottom: 12px; } }
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  line-height: 1.25; }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 16px;
+      line-height: 24px; } }

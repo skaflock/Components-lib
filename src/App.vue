@@ -17,7 +17,7 @@
             />
             <main class="main">
                 <components-list
-                        v-bind:category="currentCategory"
+                        :category="currentCategory"
                         ref="componentsList"
                 />
             </main>
@@ -57,7 +57,7 @@
                 .then(response => response.json())
                 .then(json => {
                     for (const component in json) {
-                        this.categories.push(json[component].tag);
+                        this.categories.push(json[component].category);
                     }
                     this.categories.sort();
                     this.currentCategory = this.categories[0];
@@ -70,10 +70,10 @@
 
 <style lang="scss">
     #app {
-        @import "../public/styles/layout.scss";
-        @import "../public/styles/base.scss";
-        @import "../public/styles/common-spoiler.scss";
-        @import "../public/styles/common-tab.scss";
-        @import "../public/styles/stepper.scss";
+        @import "../public/styles/scss/layout.scss";
+        @import "../public/styles/scss/base.scss";
+        @import "../public/styles/scss/common-spoiler.scss";
+        @import "../public/styles/scss/common-tab.scss";
+        @import "../public/styles/scss/stepper.scss";
     }
 </style>

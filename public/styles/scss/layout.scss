@@ -21,6 +21,12 @@ html, body {
 	position:relative;
 }
 
+body {
+	&.in-framre {
+		padding: 70px;
+	}
+}
+
 .page-wrapper {
 	position: relative;
 	display: flex;

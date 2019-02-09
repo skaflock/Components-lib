@@ -2,7 +2,7 @@ import $ from 'jquery'
 /**
  * Common tab jQuery plugin
  */
-$.fn.commonTab = function() {
+$.fn.serviceTab = function() {
     const $self = $(this);
     const $link = $self.find('.js-tab-link');
     const $content = $self.find('.js-tab-content');

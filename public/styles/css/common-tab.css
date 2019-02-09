@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/*
+//размеры контейнера
+$xs: 0;
+$sm: 540px;
+$md: 768px;
+$lg: 992px;
+$xl: 1130px;
+$xxl: 1540px;
+
+//точки перехода
+$xs-point: '0';
+$sm-point: '600px';
+$md-point: '808px';
+$lg-point: '1032px';
+$xl-point: '1230px';
+$xxl-point: '1600px';
+*/
+.common-tab__header {
+  display: flex;
+  height: 30px; }
+
+.common-tab__link {
+  height: 100%;
+  margin-right: 5px;
+  padding: 0 15px;
+  font-size: 16px;
+  line-height: 30px;
+  border-radius: 4px 4px 0 0;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid currentColor;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer; }
+  .common-tab__link.current, .common-tab__link:hover {
+    color: #ffffff;
+    background-color: #000000; }
+
+.common-tab__content {
+  display: none;
+  height: 300px; }
+  .common-tab__content pre {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #11b267;
+    background-color: #000000; }
+  .common-tab__content.current {
+    display: block; }

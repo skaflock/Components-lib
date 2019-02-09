@@ -33,14 +33,14 @@
         mounted() {
             setTimeout(() => {
                 this.currentCategory = this.category;
-                this.components = componentsList.filter(component => component.tag === this.currentCategory);
+                this.components = componentsList.filter(component => component.category === this.currentCategory);
             }, 100);
             this.$watch('category', () => this.renderControl++);
 
         },
         methods : {
             changeItems(category) {
-                    this.components = componentsList.filter(component => component.tag === category);
+                    this.components = componentsList.filter(component => component.category === category);
             }
         }
     }

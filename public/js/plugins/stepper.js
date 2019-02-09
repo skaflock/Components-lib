@@ -1,4 +1,3 @@
-import $ from 'jquery'
 /**
  * Счетчик  в инпуте
  */
