@@ -1,0 +1,83 @@
+@import "variables";
+
+$burgerBackgrondColor: rgba(0, 0, 0, 0);
+$burgerColor : #000000;
+
+.i-menu-hamburger {
+    width: 24px;
+    height: 20px;
+    display: inline-flex;
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+    background-color: $burgerBackgrondColor;
+    border: none;
+    cursor: pointer;
+
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-shrink: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $burgerColor;
+        border-radius: 20px;
+        transition: width 0.3s ease-in-out, transform 0.3s ease-in-out, transform-origin 0.3s ease-in-out;
+    }
+
+    &::after {
+        content: '';
+        flex-shrink: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        vertical-align: middle;
+        background-color: $burgerColor;
+        border-radius: 20px;
+        transition: width 0.3s ease-in-out, transform 0.3s ease-in-out, transform-origin 0.3s ease-in-out;
+    }
+
+    &::before {
+        content: '';
+        flex-shrink: 0;
+        position: absolute;
+        top: calc(50% - 2px);
+        left: 0;
+        width: 100%;
+        height: 4px;
+        vertical-align: middle;
+        background-color: $burgerColor;
+        border-radius: 20px;
+        transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out, left 0.3s ease-in-out, opacity 0.3s ease-in-out, transform-origin 0.3s ease-in-out;
+    }
+}
+
+.menu-container {
+    &.crossAnimation {
+        .i-menu-hamburger {
+            span {
+                width: 23px;
+                transform: rotate(45deg);
+                transform-origin: left center;
+            }
+
+            &::before {
+                width: 4px;
+                border-radius: 50%;
+                left: 5px;
+                transform-origin: center;
+                opacity: 0;
+            }
+
+            &::after {
+                width: 23px;
+                transform: rotate(-45deg);
+                transform-origin: left center;
+            }
+        }
+    }
+}

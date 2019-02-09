@@ -11,13 +11,9 @@
                     </div>
                 </div>
             </header>
-            <sidebar :category="currentCategory"
-                     :categories="categories"
-                     @change-category="changeCategory"
-            />
+            <sidebar />
             <main class="main">
                 <components-list
-                        :category="currentCategory"
                         ref="componentsList"
                 />
             </main>
@@ -42,25 +38,32 @@
         },
         data() {
             return {
-                categories : [],
-                currentCategory: ''
             }
         },
-        methods : {
-            changeCategory(category) {
-                this.$refs.componentsList.changeItems(category);
-                return this.currentCategory = category;
+        computed: {
+            categories()  {
+                return this.$store.state.categories
+            },
+            currentCategory() {
+                return this.$store.state.currentCategory
             }
         },
         created() {
             fetch('/components.json')
                 .then(response => response.json())
                 .then(json => {
+                    let currentCategoriesArray = [];
+                    let components = [];
                     for (const component in json) {
-                        this.categories.push(json[component].category);
+                        currentCategoriesArray.push(json[component].category);
+                        components.push(json[component]);
                     }
-                    this.categories.sort();
-                    this.currentCategory = this.categories[0];
+                    currentCategoriesArray.sort();
+                    this.$store.commit('loadCategories',currentCategoriesArray);
+                    this.$store.commit('loadComponents',components);
+                    this.$store.commit('setCurrentCategory',currentCategoriesArray[0]);
+                    const filteredComponents = this.$store.state.components.filter(component => component.category === this.$store.state.currentCategory);
+                    this.$store.commit('loadCurrentComponents', filteredComponents);
                 });
 
         }

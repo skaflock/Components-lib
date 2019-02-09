@@ -22,6 +22,14 @@
     "scss" : "/styles/scss/stepper.scss",
     "js" : "/js/plugins/stepper.js",
     "npmUrl" : "https://www.npmjs.com/package/common-tab-svk"
+  },
+  "animatedHamburgerMenu" : {
+    "name" : "Анимированное бургерное меню",
+    "category" : "Бургерное меню",
+    "html" : "/html/mobile-menu.html",
+    "scss" : "/styles/scss/mobile-menu.scss",
+    "js" : "/js/plugins/mobileMenu.js",
+    "npmUrl" : "https://www.npmjs.com/package/common-tab-svk"
   }
 }
 

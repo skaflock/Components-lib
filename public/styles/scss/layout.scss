@@ -24,6 +24,9 @@ html, body {
 body {
 	&.in-framre {
 		padding: 70px;
+		.common-tab__content {
+			height: auto;
+		}
 	}
 }
 

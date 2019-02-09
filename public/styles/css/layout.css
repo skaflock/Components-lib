@@ -36,6 +36,8 @@ html, body {
 
 body.in-framre {
   padding: 70px; }
+  body.in-framre .common-tab__content {
+    height: auto; }
 
 .page-wrapper {
   position: relative;

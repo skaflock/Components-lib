@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/css/mobile-menu.css">
+    <link rel="stylesheet" href="../styles/css/base.css">
+    <link rel="stylesheet" href="../styles/css/layout.css">
+</head>
+<body class="in-framre">
+    <header class="js-no-animation-burger menu-container">
+        <button type="button" class="i-menu-hamburger js-hamburger-btn">
+            <span></span>
+        </button>
+    </header>
+    <header class="js-cross-animation-burger menu-container">
+        <button type="button" class="i-menu-hamburger js-hamburger-btn">
+            <span></span>
+        </button>
+    </header>
+
+<script src="../js/plugins/jquery.js"></script>
+<script src="../js/plugins/mobileMenu.js"></script>
+<script>
+    //Без анимации
+    $('.js-no-animation-burger').mobileMenu();
+
+    //Анимация превращения бургера в крестик
+    $('.js-cross-animation-burger').mobileMenu({animation: 'crossAnimation'})
+</script>
+</body>
+</html>

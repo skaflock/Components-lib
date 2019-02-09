@@ -1,4 +1,5 @@
 @import "variables";
+
 /*
 	Файл base.scss
 	- Содержит дефолтные стили для элементов.
@@ -6,51 +7,54 @@
 /* -----------------------------------*/
 /* ---------->>>  BASE  <<<-----------*/
 /* -----------------------------------*/
-html{
-	overflow-x: hidden;
+html {
+    overflow-x: hidden;
 }
+
 body {
-	font-family: $font;
-	background: $c-white;
+    font-family: $font;
+    background: $c-white;
 }
+
 a, img, input, button, textarea {
-  &:focus{
-    outline: none;
-  }
+    &:focus {
+        outline: none;
+    }
 }
+
 a {
-	&:hover {
-		text-decoration: none;
-	}
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 p {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 h1 {
-	margin-bottom: 20px;
-	font-size: 24px;
-	line-height: 1;
-	color: $c-black;
-	font-weight: 700;
-	@media (max-width: $sm-point){
-		margin-bottom: 12px;
-	}
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 1;
+    color: $c-black;
+    font-weight: 700;
+    @media (max-width: $sm-point) {
+        margin-bottom: 12px;
+    }
 }
 
 h2 {
-	margin-bottom: 15px;
-	font-size: 20px;
-	line-height: 1.25;
-	@media (max-width: $md-point){
-		font-size: 16px;
-		line-height: 24px;
-	}
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 1.25;
+    @media (max-width: $md-point) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }

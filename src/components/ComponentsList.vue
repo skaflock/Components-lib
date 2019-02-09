@@ -1,6 +1,6 @@
 <template>
     <ul class="components-list">
-        <component-view ref="component"
+        <component-view
             v-for="component in components"
             :key="renderControl"
             :component="component"
@@ -11,37 +11,25 @@
 
 <script>
     import ComponentView from "./ComponentView";
-    let componentsList = [];
-    fetch('/components.json')
-        .then(response => response.json())
-        .then(json => {
-            for (const component in json) {
-                componentsList.push(json[component]);
-            }
-        });
+
     export default {
         name: "ComponentsList",
         components: {ComponentView},
-        props : ["category"],
         data() {
             return {
-                renderControl: 1,
-                components: null,
-                currentCategory: this.category
+                renderControl: 0
+            }
+        },
+        computed: {
+            currentCategory() {
+                return this.$store.state.currentCategory
+            },
+            components() {
+                return this.$store.state.currentComponents
             }
         },
         mounted() {
-            setTimeout(() => {
-                this.currentCategory = this.category;
-                this.components = componentsList.filter(component => component.category === this.currentCategory);
-            }, 100);
-            this.$watch('category', () => this.renderControl++);
-
-        },
-        methods : {
-            changeItems(category) {
-                    this.components = componentsList.filter(component => component.category === category);
-            }
+            this.$watch('currentCategory', () => this.renderControl++);
         }
     }
 </script>
