@@ -6,13 +6,14 @@ $.fn.mobileMenu = function(options) {
     const $self = $(this);
     const $toggleMenuButton = $self.find('.js-hamburger-btn');
 
-    let animation;
+    let animation = null;
     if (typeof options === "object") {
         animation = options.animation;
     }
 
     const menuIsOpenedClass = 'opened';
     const crossAnimationClass = 'crossAnimation';
+    const circleAnimationClass = 'circleAnimation';
     const linesAnimationClass = 'linesAnimation';
 
     /**
@@ -22,6 +23,9 @@ $.fn.mobileMenu = function(options) {
         $self.addClass(menuIsOpenedClass);
         if (animation === crossAnimationClass) {
             $self.addClass(crossAnimationClass);
+        }
+        if (animation === circleAnimationClass) {
+            $self.addClass(circleAnimationClass);
         }
         if (animation === linesAnimationClass) {
             $self.addClass(linesAnimationClass);
@@ -35,6 +39,9 @@ $.fn.mobileMenu = function(options) {
         $self.removeClass(menuIsOpenedClass);
         if (animation === crossAnimationClass) {
             $self.removeClass(crossAnimationClass);
+        }
+        if (animation === circleAnimationClass) {
+            $self.removeClass(circleAnimationClass);
         }
         if (animation === linesAnimationClass) {
             $self.removeClass(linesAnimationClass);

@@ -36,7 +36,11 @@
                 js: fetch(this.component.js).then(response => response.text()).then(data => {this.js = data})
             }
         },
-        updated() {
+        mounted() {
+            setTimeout(() => {
+                console.log($(this.html));
+            });
+
             $(this.$el).serviceTab();
         }
     }

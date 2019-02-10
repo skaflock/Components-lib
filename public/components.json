@@ -24,7 +24,7 @@
     "npmUrl" : "https://www.npmjs.com/package/common-tab-svk"
   },
   "animatedHamburgerMenu" : {
-    "name" : "Анимированное бургерное меню",
+    "name" : "Бургерное меню",
     "category" : "Бургерное меню",
     "html" : "/html/mobile-menu.html",
     "scss" : "/styles/scss/mobile-menu.scss",
