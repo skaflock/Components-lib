@@ -37,7 +37,7 @@ $xxl-point: '1600px';
     height: 4px;
     background-color: #000000;
     border-radius: 20px;
-    transition: width 0.3s ease-in-out, transform 0.3s ease-in-out, transform-origin 0.3s ease-in-out; }
+    transition: width 0.3s ease-in-out, transform 0.3s ease-in-out, opacity 0.3s ease-in-out, transform-origin 0.3s ease-in-out; }
   .i-menu-hamburger::after {
     content: '';
     flex-shrink: 0;
@@ -48,7 +48,7 @@ $xxl-point: '1600px';
     height: 4px;
     background-color: #000000;
     border-radius: 20px;
-    transition: width 0.3s ease-in-out, transform 0.3s ease-in-out, transform-origin 0.3s ease-in-out; }
+    transition: width 0.3s ease-in-out, transform 0.3s ease-in-out, opacity 0.3s ease-in-out, transform-origin 0.3s ease-in-out; }
   .i-menu-hamburger span, .i-menu-hamburger .hidden-bar {
     flex-shrink: 0;
     position: absolute;
@@ -79,23 +79,19 @@ $xxl-point: '1600px';
 
 .menu-container.linesAnimation .i-menu-hamburger::before {
   opacity: 0;
-  transform: translateX(-24px);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; }
+  transform: translateX(-24px); }
 
 .menu-container.linesAnimation .i-menu-hamburger span {
   transform-origin: center;
-  transform: rotate(45deg);
-  transition: transform 0.3s ease-in-out; }
+  transform: rotate(45deg); }
 
 .menu-container.linesAnimation .i-menu-hamburger .hidden-bar {
   transform-origin: center;
-  transform: rotate(-45deg);
-  transition: transform 0.3s ease-in-out; }
+  transform: rotate(-45deg); }
 
 .menu-container.linesAnimation .i-menu-hamburger::after {
   opacity: 0;
-  transform: translateX(24px);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; }
+  transform: translateX(24px); }
 
 .menu-container.circleAnimation .i-menu-hamburger::before {
   width: 23px;

@@ -37,10 +37,6 @@
             }
         },
         mounted() {
-            setTimeout(() => {
-                console.log($(this.html));
-            });
-
             $(this.$el).serviceTab();
         }
     }

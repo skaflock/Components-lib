@@ -52,20 +52,20 @@
             fetch('/components.json')
                 .then(response => response.json())
                 .then(json => {
-                    let currentCategoriesArray = [];
+                    let categories = [];
                     let components = [];
                     for (const component in json) {
-                        currentCategoriesArray.push(json[component].category);
+                        categories.push(json[component].category);
                         components.push(json[component]);
                     }
-                    currentCategoriesArray.sort();
-                    this.$store.commit('loadCategories',currentCategoriesArray);
+                    categories = categories.filter((category, index) => categories.indexOf(category) === index);
+                    categories.sort();
+                    this.$store.commit('loadCategories',categories);
                     this.$store.commit('loadComponents',components);
-                    this.$store.commit('setCurrentCategory',currentCategoriesArray[0]);
+                    this.$store.commit('setCurrentCategory',categories[0]);
                     const filteredComponents = this.$store.state.components.filter(component => component.category === this.$store.state.currentCategory);
                     this.$store.commit('loadCurrentComponents', filteredComponents);
                 });
-
         }
     };
 

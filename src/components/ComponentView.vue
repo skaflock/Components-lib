@@ -7,7 +7,6 @@
 </template>
 
 <script>
-    import $ from "jquery";
     import CommonTabs from "./CommonTabs";
     export default {
         name: "ComponentView",
