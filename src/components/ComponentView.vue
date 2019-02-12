@@ -14,9 +14,17 @@
         props : ["component"],
         data() {
             return {
-                currentComponent: this.component,
-                name: this.component.name,
-                npmUrl: this.component.npmUrl
+            }
+        },
+        computed: {
+            currentComponent() {
+                return this.component
+            },
+            name() {
+                return this.component.name
+            },
+            npmUrl() {
+                return this.component.npmUrl
             }
         }
     }

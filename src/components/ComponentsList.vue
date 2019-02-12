@@ -1,8 +1,8 @@
 <template>
     <ul class="components-list">
-        <component-view ref="component"
+        <component-view
             v-for="component in components"
-            :key="renderControl"
+            :key="component.id"
             :component="component"
         >
         </component-view>

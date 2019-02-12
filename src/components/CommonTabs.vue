@@ -30,10 +30,20 @@
         props: ['component'],
         data() {
             return {
-                htmlUrl: this.component.html,
-                html: fetch(this.component.html).then(response => response.text()).then(data => {this.html = data}),
-                scss: fetch(this.component.scss).then(response => response.text()).then(data => {this.scss = data}),
-                js: fetch(this.component.js).then(response => response.text()).then(data => {this.js = data})
+            }
+        },
+        computed: {
+            htmlUrl() {
+                return this.component.html
+            },
+            html() {
+                return fetch(this.component.html).then(response => response.text()).then(data => {this.html = data})
+            },
+            scss() {
+                return fetch(this.component.scss).then(response => response.text()).then(data => {this.scss = data})
+            },
+            js() {
+                return fetch(this.component.js).then(response => response.text()).then(data => {this.js = data})
             }
         },
         mounted() {
