@@ -30,18 +30,18 @@
         props: ['component'],
         data() {
             return {
-                html: fetch(this.component.html).then(response => response.text()).then(data => {this.html = data}),
+                html: fetch(this.component.templateHtml).then(response => response.text()).then(data => {this.html = data}),
                 scss: fetch(this.component.scss).then(response => response.text()).then(data => {this.scss = data}),
                 js: fetch(this.component.js).then(response => response.text()).then(data => {this.js = data})
             }
         },
         computed: {
             htmlUrl() {
-                return this.component.html
+                return this.component.frameHtml
             }
         },
         updated() {
-            fetch(this.component.html).then(response => response.text()).then(data => {this.html = data});
+            fetch(this.component.templateHtml).then(response => response.text()).then(data => {this.html = data});
             fetch(this.component.scss).then(response => response.text()).then(data => {this.scss = data});
             fetch(this.component.js).then(response => response.text()).then(data => {this.js = data});
         },

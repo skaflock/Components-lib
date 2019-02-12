@@ -2,7 +2,8 @@
   "commonSpoiler" : {
     "name" : "Обычный спойлер",
     "category" : "Спойлеры",
-    "html" : "/html/common-spoiler.html",
+    "frameHtml" : "/html/common-spoiler.html",
+    "templateHtml" : "/html/templates-html/common-spoiler.html",
     "scss" : "/styles/scss/common-spoiler.scss",
     "js" : "/js/plugins/commonSpoiler.js",
     "npmUrl" : "https://www.npmjs.com/package/common-spoiler-svk"
@@ -10,7 +11,8 @@
   "commonTabs" : {
     "name" : "Обычные табы",
     "category" : "Табы",
-    "html" : "/html/common-tab.html",
+    "frameHtml" : "/html/common-tab.html",
+    "templateHtml" : "/html/templates-html/common-tab.html",
     "scss" : "/styles/scss/common-tab.scss",
     "js" : "/js/plugins/commonTab.js",
     "npmUrl" : "https://www.npmjs.com/package/common-tab-svk"
@@ -18,7 +20,8 @@
   "stepper" : {
     "name" : "Степпер",
     "category" : "Степперы",
-    "html" : "/html/stepper.html",
+    "frameHtml" : "/html/stepper.html",
+    "templateHtml" : "/html/templates-html/stepper.html",
     "scss" : "/styles/scss/stepper.scss",
     "js" : "/js/plugins/stepper.js",
     "npmUrl" : "https://www.npmjs.com/package/common-tab-svk"
@@ -26,7 +29,8 @@
   "animatedHamburgerMenu" : {
     "name" : "Бургерное меню",
     "category" : "Бургерное меню",
-    "html" : "/html/mobile-menu.html",
+    "frameHtml" : "/html/mobile-menu.html",
+    "templateHtml" : "/html/templates-html/mobile-menu.html",
     "scss" : "/styles/scss/mobile-menu.scss",
     "js" : "/js/plugins/mobileMenu.js",
     "npmUrl" : "https://www.npmjs.com/package/common-tab-svk"

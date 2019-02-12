@@ -11,7 +11,7 @@
                     </div>
                 </div>
             </header>
-            <sidebar />
+            <sidebar :components="components"/>
             <main class="main">
                 <components-list
                         ref="componentsList"
@@ -38,6 +38,7 @@
         },
         data() {
             return {
+                components: []
             }
         },
         computed: {
@@ -52,18 +53,21 @@
             fetch('/components.json')
                 .then(response => response.json())
                 .then(json => {
+
                     let categories = [];
                     let components = [];
+
                     for (const component in json) {
                         categories.push(json[component].category);
                         components.push(json[component]);
                     }
+
+                    this.components = components;
                     categories = categories.filter((category, index) => categories.indexOf(category) === index);
                     categories.sort();
                     this.$store.commit('loadCategories',categories);
-                    this.$store.commit('loadComponents',components);
                     this.$store.commit('setCurrentCategory',categories[0]);
-                    const filteredComponents = this.$store.state.components.filter(component => component.category === this.$store.state.currentCategory);
+                    const filteredComponents = this.components.filter(component => component.category === this.$store.state.currentCategory);
                     this.$store.commit('loadCurrentComponents', filteredComponents);
                 });
         }
@@ -75,8 +79,5 @@
     #app {
         @import "../public/styles/scss/layout.scss";
         @import "../public/styles/scss/base.scss";
-        @import "../public/styles/scss/common-spoiler.scss";
-        @import "../public/styles/scss/common-tab.scss";
-        @import "../public/styles/scss/stepper.scss";
     }
 </style>

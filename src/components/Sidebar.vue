@@ -15,9 +15,10 @@
 
     export default {
         name: "Sidebar",
+        props: ["components"],
         data() {
             return {
-                selectedCategoryIndex : 0,
+                selectedCategoryIndex : 0
             }
         },
         computed: {
@@ -32,14 +33,10 @@
             changeCategory(index) {
                 this.selectedCategoryIndex = index;
                 this.$store.commit('setCurrentCategory',this.$store.state.categories[index]);
-                const filteredComponents = this.$store.state.components.filter(component => component.category === this.$store.state.currentCategory);
+                const filteredComponents = this.components.filter(component => component.category === this.$store.state.currentCategory);
                 this.$store.commit('loadCurrentComponents', filteredComponents);
             }
         }
     }
 
 </script>
-
-<style scoped>
-
-</style>

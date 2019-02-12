@@ -7,7 +7,6 @@ export default new Vuex.Store({
     state: {
         categories: [],
         currentCategory: '',
-        components: [],
         currentComponents: []
     },
     mutations: {
@@ -16,9 +15,6 @@ export default new Vuex.Store({
         },
         setCurrentCategory(state, category) {
             state.currentCategory = category;
-        },
-        loadComponents(state, components) {
-            state.components = components;
         },
         loadCurrentComponents(state, components) {
             state.currentComponents = components;
