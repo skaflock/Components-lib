@@ -30,9 +30,9 @@
         props: ['component'],
         data() {
             return {
-                html: fetch(this.component.templateHtml).then(response => response.text()).then(data => {this.html = data}),
-                scss: fetch(this.component.scss).then(response => response.text()).then(data => {this.scss = data}),
-                js: fetch(this.component.js).then(response => response.text()).then(data => {this.js = data})
+                html: '',
+                scss: '',
+                js: ''
             }
         },
         computed: {
@@ -40,13 +40,19 @@
                 return this.component.frameHtml
             }
         },
+        methods: {
+            getData() {
+                fetch(this.component.templateHtml).then(response => response.text()).then(data => {this.html = data});
+                fetch(this.component.scss).then(response => response.text()).then(data => {this.scss = data});
+                fetch(this.component.js).then(response => response.text()).then(data => {this.js = data});
+            }
+        },
         updated() {
-            fetch(this.component.templateHtml).then(response => response.text()).then(data => {this.html = data});
-            fetch(this.component.scss).then(response => response.text()).then(data => {this.scss = data});
-            fetch(this.component.js).then(response => response.text()).then(data => {this.js = data});
+            this.getData();
         },
         mounted() {
             $(this.$el).serviceTab();
+            this.getData();
         }
     }
 </script>

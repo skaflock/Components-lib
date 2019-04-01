@@ -29,6 +29,7 @@
 <script>
     import Sidebar from "./components/Sidebar";
     import ComponentsList from "./components/ComponentsList";
+    import {mapGetters} from 'vuex';
 
     export default {
         name: 'app',
@@ -42,12 +43,10 @@
             }
         },
         computed: {
-            categories()  {
-                return this.$store.state.categories
-            },
-            currentCategory() {
-                return this.$store.state.currentCategory
-            }
+            ...mapGetters({
+                categories: 'getCategories',
+                currentCategory: 'getCurrentCategory'
+            })
         },
         created() {
             fetch('/components.json')
@@ -65,10 +64,10 @@
                     this.components = components;
                     categories = categories.filter((category, index) => categories.indexOf(category) === index);
                     categories.sort();
-                    this.$store.commit('loadCategories',categories);
-                    this.$store.commit('setCurrentCategory',categories[0]);
+                    this.$store.dispatch('loadCategories',categories);
+                    this.$store.dispatch('setCurrentCategory',categories[0]);
                     const filteredComponents = this.components.filter(component => component.category === this.$store.state.currentCategory);
-                    this.$store.commit('loadCurrentComponents', filteredComponents);
+                    this.$store.dispatch('loadCurrentComponents', filteredComponents);
                 });
         }
     };

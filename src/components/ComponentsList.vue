@@ -11,25 +11,16 @@
 
 <script>
     import ComponentView from "./ComponentView";
+    import {mapGetters} from 'vuex';
 
     export default {
         name: "ComponentsList",
         components: {ComponentView},
-        data() {
-            return {
-                renderControl: 0
-            }
-        },
         computed: {
-            currentCategory() {
-                return this.$store.state.currentCategory
-            },
-            components() {
-                return this.$store.state.currentComponents
-            }
-        },
-        mounted() {
-            this.$watch('currentCategory', () => this.renderControl++);
+            ...mapGetters({
+                components: 'getCurrentComponents',
+                currentCategory: 'getCurrentCategory'
+            })
         }
     }
 </script>

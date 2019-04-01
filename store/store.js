@@ -7,7 +7,8 @@ export default new Vuex.Store({
     state: {
         categories: [],
         currentCategory: '',
-        currentComponents: []
+        currentComponents: [],
+        component: {}
     },
     mutations: {
         loadCategories(state, categories) {
@@ -19,5 +20,21 @@ export default new Vuex.Store({
         loadCurrentComponents(state, components) {
             state.currentComponents = components;
         }
+    },
+    actions: {
+        loadCategories(context, categories) {
+            context.commit('loadCategories', categories);
+        },
+        setCurrentCategory(context, category) {
+            context.commit('setCurrentCategory', category);
+        },
+        loadCurrentComponents(context, components) {
+            context.commit('loadCurrentComponents', components);
+        }
+    },
+    getters: {
+        getCategories: state => state.categories,
+        getCurrentCategory: state => state.currentCategory,
+        getCurrentComponents: state => state.currentComponents
     }
 })

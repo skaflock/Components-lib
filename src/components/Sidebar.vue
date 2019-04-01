@@ -12,6 +12,7 @@
 </template>
 
 <script>
+    import {mapGetters} from 'vuex';
 
     export default {
         name: "Sidebar",
@@ -22,19 +23,17 @@
             }
         },
         computed: {
-            categories()  {
-                return this.$store.state.categories
-            },
-            currentCategory() {
-                return this.$store.state.currentCategory
-            }
+            ...mapGetters({
+                categories: 'getCategories',
+                currentCategory: 'getCurrentCategory'
+            })
         },
         methods : {
             changeCategory(index) {
                 this.selectedCategoryIndex = index;
-                this.$store.commit('setCurrentCategory',this.$store.state.categories[index]);
+                this.$store.dispatch('setCurrentCategory',this.$store.state.categories[index]);
                 const filteredComponents = this.components.filter(component => component.category === this.$store.state.currentCategory);
-                this.$store.commit('loadCurrentComponents', filteredComponents);
+                this.$store.dispatch('loadCurrentComponents', filteredComponents);
             }
         }
     }
