@@ -23,8 +23,7 @@
     "frameHtml" : "/html/stepper.html",
     "templateHtml" : "/html/templates-html/stepper.html",
     "scss" : "/styles/scss/stepper.scss",
-    "js" : "/js/plugins/stepper.js",
-    "npmUrl" : "https://www.npmjs.com/package/common-tab-svk"
+    "js" : "/js/plugins/stepper.js"
   },
   "animatedHamburgerMenu" : {
     "name" : "Бургерное меню",
@@ -32,8 +31,14 @@
     "frameHtml" : "/html/mobile-menu.html",
     "templateHtml" : "/html/templates-html/mobile-menu.html",
     "scss" : "/styles/scss/mobile-menu.scss",
-    "js" : "/js/plugins/mobileMenu.js",
-    "npmUrl" : "https://www.npmjs.com/package/common-tab-svk"
+    "js" : "/js/plugins/mobileMenu.js"
+  },
+  "textInputs" : {
+    "name" : "Текстовые инпуты",
+    "category" : "Текстовые инпуты",
+    "frameHtml" : "/html/text-inputs.html",
+    "templateHtml" : "/html/templates-html/text-inputs.html",
+    "scss" : "/styles/scss/text-inputs.scss"
   }
 }
 

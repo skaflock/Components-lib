@@ -2,7 +2,7 @@
     <li>
         <div class="component-name">{{ name }}</div>
         <common-tabs :component="currentComponent"></common-tabs>
-        <a :href="npmUrl">Ссылка на npm</a>
+        <a v-if="typeof component.npmUrl !== 'undefined'" :href="npmUrl">Ссылка на npm</a>
     </li>
 </template>
 

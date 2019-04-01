@@ -1,0 +1,71 @@
+.form-group {
+  position: relative;
+  width: 100%;
+  padding-bottom: 17px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  .form-group__label {
+    width: 100%;
+    margin-bottom: 2px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #888888; }
+    @media all and (max-width: 767px) {
+      .form-group__label {
+        margin-bottom: 7px;
+        font-size: 14px;
+        line-height: 14px; } }
+  .form-group__hint {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 14px;
+    color: #c1c1c1; }
+  .form-group__inputs-separator {
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 18px;
+    color: #888888; }
+    @media all and (max-width: 767px) {
+      .form-group__inputs-separator {
+        margin: 0 5px; } }
+  .form-group .help-block {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    font-size: 12px;
+    line-height: 13px; }
+  .form-group label {
+    margin-bottom: 2px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #888888; }
+    @media all and (max-width: 767px) {
+      .form-group label {
+        font-size: 14px;
+        line-height: 14px; } }
+  .form-group.has-error .help-block {
+    display: block;
+    color: #ff013d; }
+  .form-group.has-error .form-control {
+    border: 2px solid #ff013d; }
+  .form-group.has-error .checkbox-input__icon {
+    border: 2px solid #ff013d; }
+  .form-group.has-success .help-block {
+    display: block;
+    color: #11b267; }
+  .form-group.has-success .form-control {
+    border: 2px solid #11b267; }
+
+.form-control {
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 4px;
+  border: 1px solid #e1e1e1;
+  font-size: 16px;
+  line-height: 40px;
+  color: #121721; }
+  .form-control::placeholder {
+    font-size: 14px; }

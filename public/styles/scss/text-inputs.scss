@@ -1,0 +1,94 @@
+$c-black: #121721;
+$c-green: #11b267;
+$c-red: #ff013d;
+$c-grey: #e1e1e1;
+$c-grey-dark: #c1c1c1;
+$c-grey-dark-8: #888888;
+
+.form-group {
+  position: relative;
+  width: 100%;
+  padding-bottom: 17px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  &__label {
+    width: 100%;
+    margin-bottom: 2px;
+    font-size: 14px;
+    line-height: 18px;
+    color: $c-grey-dark-8;
+    @media all and (max-width: 767px) {
+      margin-bottom: 7px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+  &__hint {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 14px;
+    color: $c-grey-dark;
+  }
+  &__inputs-separator {
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 18px;
+    color: $c-grey-dark-8;
+    @media all and (max-width: 767px) {
+      margin: 0 5px;
+    }
+  }
+  .help-block {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    font-size: 12px;
+    line-height: 13px;
+  }
+  label {
+    margin-bottom: 2px;
+    font-size: 14px;
+    line-height: 18px;
+    color: $c-grey-dark-8;
+    @media all and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+  &.has-error {
+    .help-block {
+      display: block;
+      color: $c-red;
+    }
+    .form-control {
+      border: 2px solid $c-red;
+    }
+    .checkbox-input__icon {
+      border: 2px solid $c-red;
+    }
+  }
+  &.has-success {
+    .help-block {
+      display: block;
+      color: $c-green;
+    }
+    .form-control {
+      border: 2px solid $c-green;
+    }
+  }
+}
+.form-control {
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 4px;
+  border: 1px solid $c-grey;
+  font-size: 16px;
+  line-height: 40px;
+  color: $c-black;
+  &::placeholder {
+    font-size: 14px;
+  }
+}
