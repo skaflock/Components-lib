@@ -1,7 +1,7 @@
 /**
  * Счетчик  в инпуте
  */
-$.fn.stepper = function() {
+$.fn.stepper = function(options) {
     const $self = $(this),
         self = this,
         $input = $self.find('.js-stepper__num'),
@@ -19,9 +19,16 @@ $.fn.stepper = function() {
             'Delete'
         ];
 
+    let tooltipAvailability;
     let timer;
     let max = $input.data('max'),
         min = $input.data('min');
+
+    if (typeof options === 'object') {
+        tooltipAvailability = options.tooltip;
+    } else {
+        tooltipAvailability = false;
+    }
 
     /**
      * Добавление тултипа с предупреждением об ограничении
@@ -74,7 +81,7 @@ $.fn.stepper = function() {
     this.setValue = (value, showError) => {
         const processedValue = processValue(value);
         $input.val(processedValue);
-        if (typeof showError !== 'undefined' && showError && value > processedValue) {
+        if (typeof showError !== 'undefined' && showError && value > processedValue && tooltipAvailability) {
             showTooltip();
         }
         checkButtons();
@@ -137,13 +144,13 @@ $.fn.stepper = function() {
     const init = () => {
         //устанавливаем начальное  значение
         this.setValue(this.getValue(), false);
-        //сохраняем объект а дата-атрибут
+        //сохраняем объект в дата-атрибут
         $self.data('stepper', this);
     };
 
     init();
 
-    $input.on('keyup keypress input', function(e) {
+    $input.on('keyup input', function(e) {
         if(inputAvailableValues.test(e.key) || availableKeys.indexOf(e.key) !== -1) {
             self.setValue(this.value, true);
         } else {

@@ -45,6 +45,9 @@
             height: 80%;
         }
     }
+    &__content {
+        padding: 20px;
+    }
     &:hover {
         color: $c-red;
         .common-spoiler__state-toggle-icon {

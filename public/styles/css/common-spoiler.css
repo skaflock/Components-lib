@@ -56,6 +56,8 @@ $xxl-point: '1600px';
     .common-spoiler__state-toggle-icon::before {
       width: 2px;
       height: 80%; }
+  .common-spoiler__content {
+    padding: 20px; }
   .common-spoiler:hover {
     color: #ff033d; }
     .common-spoiler:hover .common-spoiler__state-toggle-icon {

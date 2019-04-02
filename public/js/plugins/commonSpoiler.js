@@ -2,8 +2,9 @@
  * Common spoiler jQuery plugin
  */
 $.fn.commonSpoiler = function() {
+
     const $self = $(this);
-    const $button = $self.find('.js-common-spoiler-state-toggle');
+    const $button = $self.find('.js-toggle-button');
     const showContentClass = 'opened';
 
     /**
