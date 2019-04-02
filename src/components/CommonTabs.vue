@@ -42,7 +42,7 @@
             }
         },
         methods: {
-            getData() {
+            init() {
                 fetch(this.component.templateHtml).then(response => response.text()).then(data => {this.html = data});
                 fetch(this.component.scss).then(response => response.text()).then(data => {this.scss = data});
                 if (typeof this.component.js !== 'undefined') {
@@ -56,10 +56,10 @@
             }
         },
         updated() {
-            this.getData();
+            this.init();
         },
         mounted() {
-            this.getData();
+            this.init();
         }
     }
 </script>
