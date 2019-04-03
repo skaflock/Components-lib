@@ -53,10 +53,23 @@
                     this.js = 'JS не используется'
                 }
                 $(this.$el).serviceTab();
+            },
+
+            setActiveTab() {
+                const tabLinks = this.$el.querySelectorAll('.js-tab-link');
+                const tabContent = this.$el.querySelectorAll('.js-tab-content');
+
+                tabLinks.forEach( el => el.classList.remove('current'));
+                tabContent.forEach( el => el.classList.remove('current'));
+                tabLinks[0].classList.add('current');
+                tabContent[0].classList.add('current');
             }
         },
         updated() {
             this.init();
+        },
+        beforeUpdate() {
+            this.setActiveTab();
         },
         mounted() {
             this.init();
