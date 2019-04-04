@@ -2,8 +2,7 @@
   "commonSpoiler" : {
     "name" : "Обычный спойлер",
     "category" : "Спойлеры",
-    "frameHtml" : "/html/common-spoiler.html",
-    "templateHtml" : "/html/templates-html/common-spoiler.html",
+    "html" : "/html/common-spoiler.html",
     "scss" : "/styles/scss/common-spoiler.scss",
     "js" : "/js/plugins/commonSpoiler.js",
     "npmUrl" : "https://www.npmjs.com/package/common-spoiler-svk"
@@ -11,8 +10,7 @@
   "commonTabs" : {
     "name" : "Обычные табы",
     "category" : "Табы",
-    "frameHtml" : "/html/common-tab.html",
-    "templateHtml" : "/html/templates-html/common-tab.html",
+    "html" : "/html/common-tab.html",
     "scss" : "/styles/scss/common-tab.scss",
     "js" : "/js/plugins/commonTab.js",
     "npmUrl" : "https://www.npmjs.com/package/common-tab-svk"
@@ -20,24 +18,21 @@
   "stepper" : {
     "name" : "Степпер",
     "category" : "Степперы",
-    "frameHtml" : "/html/stepper.html",
-    "templateHtml" : "/html/templates-html/stepper.html",
+    "html" : "/html/stepper.html",
     "scss" : "/styles/scss/stepper.scss",
     "js" : "/js/plugins/stepper.js"
   },
   "animatedHamburgerMenu" : {
     "name" : "Бургерное меню",
     "category" : "Бургерное меню",
-    "frameHtml" : "/html/mobile-menu.html",
-    "templateHtml" : "/html/templates-html/mobile-menu.html",
+    "html" : "/html/mobile-menu.html",
     "scss" : "/styles/scss/mobile-menu.scss",
     "js" : "/js/plugins/mobileMenu.js"
   },
   "textInputs" : {
     "name" : "Текстовые инпуты",
     "category" : "Текстовые инпуты",
-    "frameHtml" : "/html/text-inputs.html",
-    "templateHtml" : "/html/templates-html/text-inputs.html",
+    "html" : "/html/text-inputs.html",
     "scss" : "/styles/scss/text-inputs.scss"
   }
 }

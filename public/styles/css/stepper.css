@@ -1,21 +1,3 @@
-@charset "UTF-8";
-/*
-//размеры контейнера
-$xs: 0;
-$sm: 540px;
-$md: 768px;
-$lg: 992px;
-$xl: 1130px;
-$xxl: 1540px;
-
-//точки перехода
-$xs-point: '0';
-$sm-point: '600px';
-$md-point: '808px';
-$lg-point: '1032px';
-$xl-point: '1230px';
-$xxl-point: '1600px';
-*/
 .stepper-wrapper {
   display: inline-flex;
   align-items: center; }
@@ -30,12 +12,6 @@ $xxl-point: '1600px';
   font-size: 0;
   border-radius: 4px;
   border: 1px solid #c1c1c1; }
-  @media (max-width: 768px) {
-    .c-stepper {
-      margin-right: 10px; } }
-  @media (max-width: 320px) {
-    .c-stepper {
-      margin-bottom: 16px; } }
   .c-stepper__increment, .c-stepper__decrement {
     display: inline-block;
     position: relative;
@@ -43,7 +19,8 @@ $xxl-point: '1600px';
     height: 100%;
     border-radius: 3px;
     border: none;
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    cursor: pointer; }
     .c-stepper__increment::after, .c-stepper__decrement::after {
       content: '';
       position: absolute;
@@ -54,9 +31,8 @@ $xxl-point: '1600px';
       left: 50%;
       transform: translate(-50%, -50%);
       transition: background-color 0.3s ease-in-out; }
-    @media (min-width: 1280px) {
-      .c-stepper__increment:hover::after, .c-stepper__increment:hover::before, .c-stepper__decrement:hover::after, .c-stepper__decrement:hover::before {
-        background-color: #ff033d; } }
+    .c-stepper__increment:hover::after, .c-stepper__increment:hover::before, .c-stepper__decrement:hover::after, .c-stepper__decrement:hover::before {
+      background-color: #ff033d; }
     .c-stepper__increment.disabled, .c-stepper__decrement.disabled {
       cursor: default; }
       .c-stepper__increment.disabled::after, .c-stepper__increment.disabled::before, .c-stepper__decrement.disabled::after, .c-stepper__decrement.disabled::before {

@@ -1,21 +1,3 @@
-@charset "UTF-8";
-/*
-//размеры контейнера
-$xs: 0;
-$sm: 540px;
-$md: 768px;
-$lg: 992px;
-$xl: 1130px;
-$xxl: 1540px;
-
-//точки перехода
-$xs-point: '0';
-$sm-point: '600px';
-$md-point: '808px';
-$lg-point: '1032px';
-$xl-point: '1230px';
-$xxl-point: '1600px';
-*/
 .i-menu-hamburger {
   width: 24px;
   height: 20px;

@@ -34,9 +34,9 @@ html {
 html, body {
   position: relative; }
 
-body.in-framre {
+body.in-frame {
   padding: 70px; }
-  body.in-framre .common-tab__content {
+  body.in-frame .common-tab__content {
     height: auto; }
 
 .page-wrapper {

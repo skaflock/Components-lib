@@ -6,50 +6,48 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/css/text-inputs.css">
+    <link rel="stylesheet" href="../styles/css/forms.css">
     <link rel="stylesheet" href="../styles/css/base.css">
     <link rel="stylesheet" href="../styles/css/layout.css">
 </head>
 <body>
 
-    <div class="test-row">
-        <div class="form-group" style="margin-right: 20px">
-            <label for="login">Login</label>
-            <input type="text" id="login" class="form-control" aria-labelledby="login">
-            <div class="help-block">Проверьте правильность логина</div>
-        </div>
-
-        <div class="form-group has-success" style="margin-right: 20px">
-            <label for="email">E-mail</label>
-            <input type="text" id="email" class="form-control" aria-labelledby="email">
-            <div class="help-block">Проверьте правильность e-mail адреса</div>
-        </div>
-
-        <div class="form-group has-error">
-            <label for="address">Address</label>
-            <input type="text" id="address" class="form-control" aria-labelledby="address">
-            <div class="help-block">Проверьте правильность адреса</div>
-        </div>
+    <!--Обычные инпуты-->
+    <div class="form-group">
+        <label for="login">Login</label>
+        <input type="text" id="login" class="form-control" aria-labelledby="login">
+        <div class="help-block">Проверьте правильность логина</div>
     </div>
 
-    <div class="test-row">
-        <div class="form-group form-group--active-label" style="margin-right: 20px">
-            <input type="text" id="login2" class="form-control" aria-labelledby="login2">
-            <label for="login2">Login</label>
-            <div class="help-block">Проверьте правильность логина</div>
-        </div>
+    <div class="form-group has-success">
+        <label for="email">E-mail</label>
+        <input type="text" id="email" class="form-control" aria-labelledby="email">
+        <div class="help-block">Проверьте правильность e-mail адреса</div>
+    </div>
 
-        <div class="form-group form-group--active-label has-success" style="margin-right: 20px">
-            <input type="text" id="email2" class="form-control" aria-labelledby="email2">
-            <label for="email2">E-mail</label>
-            <div class="help-block">Проверьте правильность e-mail адреса</div>
-        </div>
+    <div class="form-group has-error">
+        <label for="address">Address</label>
+        <input type="text" id="address" class="form-control" aria-labelledby="address">
+        <div class="help-block">Проверьте правильность адреса</div>
+    </div>
 
-        <div class="form-group form-group--active-label has-error">
-            <input type="text" id="address2" class="form-control" aria-labelledby="address2">
-            <label for="address2">Address</label>
-            <div class="help-block">Проверьте правильность адреса</div>
-        </div>
+    <!--Инпуты с активным лейблом-->
+    <div class="form-group form-group--active-label">
+        <input type="text" id="login2" class="form-control" aria-labelledby="login2">
+        <label for="login2">Login</label>
+        <div class="help-block">Проверьте правильность логина</div>
+    </div>
+
+    <div class="form-group form-group--active-label has-success">
+        <input type="text" id="email2" class="form-control" aria-labelledby="email2">
+        <label for="email2">E-mail</label>
+        <div class="help-block">Проверьте правильность e-mail адреса</div>
+    </div>
+
+    <div class="form-group form-group--active-label has-error">
+        <input type="text" id="address2" class="form-control" aria-labelledby="address2">
+        <label for="address2">E-mail</label>
+        <div class="help-block">Проверьте правильность адреса</div>
     </div>
 
 
