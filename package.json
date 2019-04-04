@@ -11,9 +11,11 @@
     "bootstrap": "^4.2.1",
     "common-spoiler-svk": "^1.0.1",
     "common-tab-svk": "^1.0.11",
+    "highlight.js": "^9.15.6",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.6",
     "vue": "^2.5.21",
+    "vue-highlightjs": "^1.3.3",
     "vue-router": "^3.0.2",
     "vuex": "^3.1.0"
   },
@@ -24,9 +26,6 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.21",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
@@ -35,8 +34,12 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^1.12.1",
     "gulp-uglify": "^2.0.0",
+    "node-sass": "^4.11.0",
     "postcss-inline-svg": "^3.0.0",
-    "pump": "^1.0.3"
+    "pump": "^1.0.3",
+    "sass-loader": "^7.1.0",
+    "vue-markdown-highlight": "^1.0.5",
+    "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
     "root": true,

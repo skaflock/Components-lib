@@ -10,13 +10,13 @@
             <iframe :src="htmlUrl" width="100%" height="400px" frameborder="0"></iframe>
         </div>
         <div class="common-tab__content js-tab-content" data-content="html">
-            <pre>{{ html }}</pre>
+            <pre v-highlightjs="html"><code class="html"></code></pre>
         </div>
         <div class="common-tab__content js-tab-content" data-content="scss">
-            <pre>{{ scss }}</pre>
+            <pre v-highlightjs="scss"><code class="scss"></code></pre>
         </div>
         <div v-if="showJS" class="common-tab__content js-tab-content" data-content="js">
-            <pre>{{ js }}</pre>
+            <pre v-highlightjs="js"><code class="javascript"></code></pre>
         </div>
     </div>
 </template>
