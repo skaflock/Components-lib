@@ -1,0 +1,7 @@
+[
+  "./components/common-spoiler/component.json",
+  "./components/common-tab/component.json",
+  "./components/mobile-menu/component.json",
+  "./components/stepper/component.json",
+  "./components/text-inputs/component.json"
+]

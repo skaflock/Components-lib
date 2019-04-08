@@ -49,26 +49,32 @@
             })
         },
         created() {
-            fetch('/components.json')
+            let categories = [];
+            let components = [];
+            fetch('/components-list.json')
                 .then(response => response.json())
                 .then(json => {
+                    const componentsList = json;
 
-                    let categories = [];
-                    let components = [];
-
-                    for (const component in json) {
-                        categories.push(json[component].category);
-                        components.push(json[component]);
-                    }
+                    componentsList.forEach( (url) => {
+                        fetch(url)
+                            .then(response => response.json())
+                            .then(json => {
+                                components.push(json);
+                                categories.push(json.category);
+                        })
+                    });
 
                     this.components = components;
                     categories = categories.filter((category, index) => categories.indexOf(category) === index);
                     categories.sort();
+                    console.log(categories);
                     this.$store.dispatch('loadCategories',categories);
                     this.$store.dispatch('setCurrentCategory',categories[0]);
                     const filteredComponents = this.components.filter(component => component.category === this.$store.state.currentCategory);
                     this.$store.dispatch('loadCurrentComponents', filteredComponents);
                 });
+
         }
     };
 

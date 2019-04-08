@@ -1,0 +1,9 @@
+{
+  "name" : "Обычные табы",
+  "category" : "Табы",
+  "html" : "/components/common-tab/common-tab.html",
+  "scss" : "/components/common-tab/common-tab.scss",
+  "js" : "/components/common-tab/commonTab.js",
+  "npmUrl" : "https://www.npmjs.com/package/common-tab-svk"
+}
+

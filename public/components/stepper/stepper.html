@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/css/styles.min.css">
+</head>
+<body class="in-framre">
+<!--Степпер без тултипа-->
+    <div class="stepper-wrapper">
+        <div class="c-stepper js-c-stepper">
+            <button type="button" tabindex="-1"
+                    class="c-stepper__decrement js-c-stepper__down"></button>
+            <input type="text" data-min="1" data-max="10" class="c-stepper__value js-stepper__num" value="1" title="">
+            <button type="button" tabindex="-1"
+                    class="c-stepper__increment js-c-stepper__up"></button>
+        </div>
+    </div>
+
+<!--Степпер с тултипом-->
+    <div class="stepper-wrapper">
+        <div class="c-stepper js-c-stepper-with-tooltip" data-tooltip-text="10 максимум">
+            <button type="button" tabindex="-1"
+                    class="c-stepper__decrement js-c-stepper__down"></button>
+            <input type="text" data-min="1" data-max="10" class="c-stepper__value js-stepper__num" value="1" title="">
+            <button type="button" tabindex="-1"
+                    class="c-stepper__increment js-c-stepper__up"></button>
+        </div>
+    </div>
+
+    <script src="../../js/plugins/jquery.js"></script>
+    <script src="../../js/plugins/stepper.js"></script>
+    <script>
+        $('.js-c-stepper').stepper();
+        $('.js-c-stepper-with-tooltip').stepper({tooltip: true});
+    </script>
+</body>
+</html>

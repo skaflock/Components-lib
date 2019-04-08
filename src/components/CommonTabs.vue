@@ -24,29 +24,29 @@
 <script>
     import $ from 'jquery'
     import '../../public/js/plugins/serviceTab'
+    import {mapGetters} from 'vuex';
 
     export default {
         name: "CommonTabs",
-        props: ['component'],
         data() {
             return {
-                html: '',
-                scss: '',
-                js: '',
-                htmlUrl: this.component.html,
                 showJS: true
             }
         },
+        computed: {
+            ...mapGetters({
+                htmlUrl: 'getComponentHtmlUrl',
+                html: 'getComponentHtml',
+                scss: 'getComponentScss',
+                js: 'getComponentJs'
+            })
+        },
         methods: {
             init() {
-                fetch(this.component.html).then(response => response.text()).then(data => {this.html = data});
-                fetch(this.component.scss).then(response => response.text()).then(data => {this.scss = data});
-                if (typeof this.component.js !== 'undefined') {
+                if (typeof this.$store.state.componentJs !== 'undefined') {
                     this.showJS = true;
-                    fetch(this.component.js).then(response => response.text()).then(data => {this.js = data});
                 } else {
                     this.showJS = false;
-                    this.js = 'JS не используется'
                 }
                 $(this.$el).serviceTab();
             },
@@ -74,5 +74,5 @@
 </script>
 
 <style scoped lang="scss">
-    @import "../../public/styles/scss/common-tab";
+    @import "../../public/components/common-tab/common-tab";
 </style>

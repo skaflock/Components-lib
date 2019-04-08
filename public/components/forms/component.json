@@ -1,0 +1,7 @@
+{
+  "name" : "Текстовые инпуты",
+  "category" : "Текстовые инпуты",
+  "html" : "/components/text-inputs/text-inputs.html",
+  "scss" : "/components/text-inputs/text-inputs.scss"
+}
+
