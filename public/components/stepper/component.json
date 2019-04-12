@@ -1,8 +1,10 @@
 {
-  "name" : "Степпер",
-  "category" : "Степперы",
-  "html" : "/components/stepper/stepper.html",
-  "scss" : "/components/stepper/stepper.scss",
-  "js" : "/components/stepper/stepper.js"
+  "stepper" : {
+    "name" : "Степпер",
+    "category" : "Степперы",
+    "html" : "/components/stepper/stepper.html",
+    "scss" : "/components/stepper/stepper.scss",
+    "js" : "/components/stepper/stepper.js"
+  }
 }
 

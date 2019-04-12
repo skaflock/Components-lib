@@ -1,9 +1,11 @@
 {
-  "name" : "Обычный спойлер",
-  "category" : "Спойлеры",
-  "html" : "/components/common-spoiler/common-spoiler.html",
-  "scss" : "/components/common-spoiler/common-spoiler.scss",
-  "js" : "/components/common-spoiler/commonSpoiler.js",
-  "npmUrl" : "https://www.npmjs.com/package/common-spoiler-svk"
+  "commonSpoiler" : {
+    "name" : "Обычный спойлер",
+    "category" : "Спойлеры",
+    "html" : "/components/common-spoiler/common-spoiler.html",
+    "scss" : "/components/common-spoiler/common-spoiler.scss",
+    "js" : "/components/common-spoiler/commonSpoiler.js",
+    "npmUrl" : "https://www.npmjs.com/package/common-spoiler-svk"
+  }
 }
 

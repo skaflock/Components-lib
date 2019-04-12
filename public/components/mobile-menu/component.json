@@ -1,8 +1,10 @@
 {
-  "name" : "Бургерное меню",
-  "category" : "Бургерное меню",
-  "html" : "/components/mobile-menu/mobile-menu.html",
-  "scss" : "/components/mobile-menu/mobile-menu.scss",
-  "js" : "/components/mobile-menu/mobileMenu.js"
+  "burgerMenu" : {
+    "name" : "Бургерное меню",
+    "category" : "Бургерное меню",
+    "html" : "/components/mobile-menu/mobile-menu.html",
+    "scss" : "/components/mobile-menu/mobile-menu.scss",
+    "js" : "/components/mobile-menu/mobileMenu.js"
+  }
 }
 
