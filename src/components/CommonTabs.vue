@@ -6,7 +6,7 @@
             <li class="common-tab__link js-common-tab-link js-tab-link" data-href="scss">SCSS</li>
             <li v-if="showJS" class="common-tab__link js-common-tab-link js-tab-link" data-href="js">JS</li>
         </ul>
-        <div class="common-tab__content js-tab-content current" data-content="view">
+        <div class="common-tab__content common-tab__content--frame js-tab-content current" data-content="view">
             <iframe :src="htmlUrl" width="100%" height="400px" frameborder="0"></iframe>
         </div>
         <div class="common-tab__content js-tab-content" data-content="html">
@@ -43,7 +43,7 @@
         },
         methods: {
             init() {
-                if (typeof this.$store.state.componentJs !== 'undefined') {
+                if (this.$store.state.componentJs !== null) {
                     this.showJS = true;
                 } else {
                     this.showJS = false;
@@ -68,7 +68,7 @@
             this.setActiveTab();
         },
         mounted() {
-            this.init();
+            setTimeout(() => {this.init();}, 300);
         }
     }
 </script>

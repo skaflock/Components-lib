@@ -1,5 +1,6 @@
 // Include gulp
 const gulp = require('gulp'),
+    concat = require('gulp-concat'),
     rename = require('gulp-rename');
 
 // Include Our Plugins
@@ -8,7 +9,7 @@ const sass = require('gulp-sass');
 
 const paths = {
     styles: {
-        src: './public/styles/scss/styles.scss',
+        src: ['./public/styles/scss/*.scss', './public/components/*/*.scss'],
         dest: './public/styles/css/'
     }
 };
@@ -21,6 +22,7 @@ const paths = {
 gulp.task('styles', function(){
     gulp.src(paths.styles.src)
         .pipe(sass({outputStyle: 'compressed'})).on('error', console.log)
+        .pipe(concat('styles.css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.styles.dest));
 });

@@ -49,17 +49,15 @@
                 .then(response => response.json())
                 .then(json => {
 
-                    let promises = [];
-                    json.forEach( (url) => {
-                        promises.push(fetch(url)
-                            .then(response => response.json())
-                            .then(json => {
-                                for (let component in json) {
-                                    components.push(json[component]);
-                                    categories.push(json[component].category);
-                                }
-                            }));
-                    });
+                    const promises = json.map( (url) =>
+                        fetch(url)
+                        .then(response => response.json())
+                        .then(json => {
+                            for (const component in json) {
+                                components.push(json[component]);
+                                categories.push(json[component].category);
+                            }
+                        }));
 
                     Promise.all(promises).then( () => {
                         this.components = components;
