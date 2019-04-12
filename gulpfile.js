@@ -20,7 +20,7 @@ const paths = {
 
 gulp.task('styles', function(){
     gulp.src(paths.styles.src)
-        .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
+        .pipe(sass({outputStyle: 'compressed'})).on('error', console.log)
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.styles.dest));
 });
