@@ -42,36 +42,36 @@
             }
         },
         created() {
+            let categories = [];
+            let components = [];
+
             fetch('/components-list.json')
                 .then(response => response.json())
                 .then(json => {
 
-                    let categories = [];
-                    let components = [];
-
+                    let promises = [];
                     json.forEach( (url) => {
-                        fetch(url)
+                        promises.push(fetch(url)
                             .then(response => response.json())
                             .then(json => {
-                                for (const component in json) {
+                                for (let component in json) {
                                     components.push(json[component]);
+                                    categories.push(json[component].category);
                                 }
-                        })
+                            }));
                     });
 
+                    Promise.all(promises).then( () => {
+                        this.components = components;
+                        categories = categories.filter((category, index) => categories.indexOf(category) === index);
+                        categories.sort();
+                        this.$store.dispatch('loadCategories',categories);
+                        this.$store.dispatch('setCurrentCategory',categories[0]);
+                        const filteredComponents = this.components.filter(component => component.category === this.$store.state.currentCategory);
+                        this.$store.dispatch('loadCurrentComponents', filteredComponents);
+                    });
 
-                    console.log(components);
-                    for (const component of components) {
-                    }
                 });
-
-            // this.components = components;
-            // categories = categories.filter((category, index) => categories.indexOf(category) === index);
-            // categories.sort();
-            // this.$store.dispatch('loadCategories',categories);
-            // this.$store.dispatch('setCurrentCategory',categories[0]);
-            // const filteredComponents = this.components.filter(component => component.category === this.$store.state.currentCategory);
-            // this.$store.dispatch('loadCurrentComponents', filteredComponents);
         }
     };
 
