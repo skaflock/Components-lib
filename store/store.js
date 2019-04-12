@@ -42,7 +42,7 @@ export default new Vuex.Store({
     },
     actions: {
         loadCategories(context, categories) {
-            context.commit('loadCategories', categories);
+            context.commit('loadCategories', categories.sort());
         },
         setCurrentCategory(context, category) {
             context.commit('setCurrentCategory', category);

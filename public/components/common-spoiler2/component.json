@@ -1,0 +1,9 @@
+{
+  "name" : "Обычный спойлер",
+  "category" : "Спойлеры",
+  "html" : "/components/common-spoiler2/common-spoiler.html",
+  "scss" : "/components/common-spoiler2/common-spoiler.scss",
+  "js" : "/components/common-spoiler2/commonSpoiler.js",
+  "npmUrl" : "https://www.npmjs.com/package/common-spoiler-svk"
+}
+

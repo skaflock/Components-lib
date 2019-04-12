@@ -29,7 +29,6 @@
 <script>
     import Sidebar from "./components/Sidebar";
     import ComponentsList from "./components/ComponentsList";
-    import {mapGetters} from 'vuex';
 
     export default {
         name: 'app',
@@ -39,14 +38,8 @@
         },
         data() {
             return {
-                components: []
+
             }
-        },
-        computed: {
-            ...mapGetters({
-                categories: 'getCategories',
-                currentCategory: 'getCurrentCategory'
-            })
         },
         created() {
             let categories = [];
@@ -54,9 +47,8 @@
             fetch('/components-list.json')
                 .then(response => response.json())
                 .then(json => {
-                    const componentsList = json;
 
-                    componentsList.forEach( (url) => {
+                    json.forEach( (url) => {
                         fetch(url)
                             .then(response => response.json())
                             .then(json => {
@@ -64,17 +56,15 @@
                                 categories.push(json.category);
                         })
                     });
-
-                    this.components = components;
-                    categories = categories.filter((category, index) => categories.indexOf(category) === index);
-                    categories.sort();
-                    console.log(categories);
-                    this.$store.dispatch('loadCategories',categories);
-                    this.$store.dispatch('setCurrentCategory',categories[0]);
-                    const filteredComponents = this.components.filter(component => component.category === this.$store.state.currentCategory);
-                    this.$store.dispatch('loadCurrentComponents', filteredComponents);
                 });
 
+            this.components = components;
+            categories = categories.filter((category, index) => categories.indexOf(category) === index);
+            categories.sort();
+            this.$store.dispatch('loadCategories',categories);
+            this.$store.dispatch('setCurrentCategory',categories[0]);
+            const filteredComponents = this.components.filter(component => component.category === this.$store.state.currentCategory);
+            this.$store.dispatch('loadCurrentComponents', filteredComponents);
         }
     };
 
