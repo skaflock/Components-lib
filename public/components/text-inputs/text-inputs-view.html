@@ -62,8 +62,34 @@
                 <div class="help-block">Проверьте правильность адреса</div>
             </div>
         </div>
-
     </div>
 
+    <div class="test-row" style="align-items: flex-end">
+
+        <!--Textarea -->
+        <div class="test-item">
+            <div class="form-group form-group">
+                <label for="text">Type some text</label>
+                <textarea id="text" cols="30" rows="10" class="form-control form-control--textarea"></textarea>
+            </div>
+        </div>
+
+
+        <!--Textarea с активным лейблом-->
+        <div class="test-item">
+            <div class="form-group form-group--active-label">
+                <textarea id="text2" cols="30" rows="10" class="form-control form-control--textarea js-textarea"></textarea>
+                <label for="text2">Type some text</label>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/plugins/jquery.js"></script>
+    <script src="flexibleTextarea.js"></script>
+    <script>
+        $('.js-textarea').flexibleTextarea({
+            height: 100
+        });
+    </script>
 </body>
 </html>

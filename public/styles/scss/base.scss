@@ -62,9 +62,13 @@ h2 {
 .test-row {
     display: flex;
     margin-bottom: 30px;
+    .test-item:last-child {
+        margin-right: 0;
+    }
 }
 
 .test-item {
+    flex: 20% 1 0;
     margin-right: 20px;
     margin-bottom: 20px;
 }
