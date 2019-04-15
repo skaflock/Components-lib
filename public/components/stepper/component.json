@@ -2,6 +2,7 @@
   "stepper" : {
     "name" : "Степпер",
     "category" : "Степперы",
+    "htmlView" : "/components/stepper/stepper-view.html",
     "html" : "/components/stepper/stepper.html",
     "scss" : "/components/stepper/stepper.scss",
     "js" : "/components/stepper/stepper.js"

@@ -52,7 +52,7 @@ export default new Vuex.Store({
         },
         loadComponent(context, component) {
             context.commit('loadComponent', component);
-            context.commit('loadComponentHtmlUrl', component.html);
+            context.commit('loadComponentHtmlUrl', component.htmlView);
             fetch(component.html)
                 .then(response => response.text())
                 .then(data => context.commit('loadComponentHtml', data));

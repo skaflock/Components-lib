@@ -2,6 +2,7 @@
   "textInputs" : {
     "name" : "Текстовые инпуты",
     "category" : "Текстовые инпуты",
+    "htmlView" : "/components/text-inputs/text-inputs-view.html",
     "html" : "/components/text-inputs/text-inputs.html",
     "scss" : "/components/text-inputs/text-inputs.scss"
   }

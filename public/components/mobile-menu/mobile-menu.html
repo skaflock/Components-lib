@@ -1,46 +1,37 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../styles/css/styles.min.css">
-</head>
-<body class="in-frame">
+<!--Обычный неанимированный бургер-->
+<div class="js-no-animation-burger menu-container">
+    <button type="button" class="i-menu-hamburger js-hamburger-btn">
+        <span></span>
+    </button>
+</div>
 
-    <!--Обычный неанимированный бургер-->
-    <div class="js-no-animation-burger menu-container" style="display: inline-block; margin-right: 20px">
-        <button type="button" class="i-menu-hamburger js-hamburger-btn">
-            <span></span>
-        </button>
-    </div>
+<!--Бургер с анимацией трансформации в крестик-->
+<div class="js-cross-animation-burger menu-container">
+    <button type="button" class="i-menu-hamburger js-hamburger-btn">
+        <span></span>
+    </button>
+</div>
 
-    <!--Бургер с анимацией трансформации в крестик-->
-    <div class="js-cross-animation-burger menu-container" style="display: inline-block; margin-right: 20px">
-        <button type="button" class="i-menu-hamburger js-hamburger-btn">
-            <span></span>
-        </button>
-    </div>
+<!--Бургер с анимацией трансформации в крестик в круге-->
+<div class="js-circle-animation-burger menu-container">
+    <button type="button" class="i-menu-hamburger js-hamburger-btn">
+        <span></span>
+    </button>
+</div>
 
-    <!--Бургер с анимацией трансформации в крестик в круге-->
-    <div class="js-circle-animation-burger menu-container" style="display: inline-block; margin-right: 20px">
-        <button type="button" class="i-menu-hamburger js-hamburger-btn">
-            <span></span>
-        </button>
-    </div>
+<!--Бургер с анимацией уезжающих линий-->
+<div class="js-lines-animation-burger menu-container">
+    <button type="button" class="i-menu-hamburger js-hamburger-btn">
+        <span></span>
+        <span class="hidden-bar"></span>
+    </button>
+</div>
 
-    <!--Бургер с анимацией уезжающих линий-->
-    <div class="js-lines-animation-burger menu-container" style="display: inline-block">
-        <button type="button" class="i-menu-hamburger js-hamburger-btn">
-            <span></span>
-            <span class="hidden-bar"></span>
-        </button>
-    </div>
-
+<!--Зависимости-->
 <script src="../../js/plugins/jquery.js"></script>
 <script src="mobileMenu.js"></script>
+
+<!--Инициализация плагина-->
 <script>
     //Без анимации
     $('.js-no-animation-burger').mobileMenu();
@@ -55,5 +46,3 @@
     $('.js-lines-animation-burger').mobileMenu({animation: 'linesAnimation'});
 
 </script>
-</body>
-</html>

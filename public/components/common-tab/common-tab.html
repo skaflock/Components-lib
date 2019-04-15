@@ -1,43 +1,25 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../styles/css/styles.min.css">
-</head>
-<body class="in-framre">
-    <div class="common-tab js-common-tab">
-        <ul class="common-tab__header">
-            <li class="common-tab__link js-common-tab-link js-tab-link current" data-href="html">Tab1</li>
-            <li class="common-tab__link js-common-tab-link js-tab-link" data-href="scss">Tab2</li>
-            <li class="common-tab__link js-common-tab-link js-tab-link" data-href="js">Tab3</li>
-        </ul>
-        <div class="common-tab__content js-tab-content current" data-content="html">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam dolore nulla quia.
-                A ad aperiam atque, debitis, dolorem doloremque expedita facere molestiae nulla odio, porro rem.
-                Neque, velit, voluptatum!
-        </div>
-        <div class="common-tab__content js-tab-content" data-content="scss">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam dolore nulla quia.
-                A ad aperiam atque, debitis, dolorem doloremque expedita facere molestiae nulla odio, porro rem.
-                Neque, velit, voluptatum!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam dolore nulla quia.
-            A ad aperiam atque, debitis, dolorem doloremque expedita facere molestiae nulla odio, porro rem.
-            Neque, velit, voluptatum!
-        </div>
-        <div class="common-tab__content js-tab-content" data-content="js">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam dolore nulla quia.
-                A ad aperiam atque, debitis, dolorem doloremque expedita facere molestiae nulla odio, porro rem.
-                Neque, velit, voluptatum!
-        </div>
+<div class="common-tab js-common-tab">
+    <ul class="common-tab__header">
+        <li class="common-tab__link js-common-tab-link js-tab-link current" data-href="tab1">Tab1</li>
+        <li class="common-tab__link js-common-tab-link js-tab-link" data-href="tab2">Tab2</li>
+        <li class="common-tab__link js-common-tab-link js-tab-link" data-href="tab3">Tab3</li>
+    </ul>
+    <div class="common-tab__content js-tab-content current" data-content="tab1">
+        content
     </div>
+    <div class="common-tab__content js-tab-content" data-content="tab2">
+        content
+    </div>
+    <div class="common-tab__content js-tab-content" data-content="tab3">
+        content
+    </div>
+</div>
+
+<!--Зависимости-->
 <script src="../../js/plugins/jquery.js"></script>
 <script src="commonTab.js"></script>
+
+<!--Инициализация плагина-->
 <script>
     $('.js-common-tab').commonTab();
 </script>
-</body>
-</html>

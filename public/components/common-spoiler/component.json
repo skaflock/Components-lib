@@ -2,6 +2,7 @@
   "commonSpoiler" : {
     "name" : "Обычный спойлер",
     "category" : "Спойлеры",
+    "htmlView" : "/components/common-spoiler/common-spoiler-view.html",
     "html" : "/components/common-spoiler/common-spoiler.html",
     "scss" : "/components/common-spoiler/common-spoiler.scss",
     "js" : "/components/common-spoiler/commonSpoiler.js",
