@@ -19,19 +19,52 @@
 
 <!--Инпуты с активным лейблом-->
 <div class="form-group form-group--active-label">
-    <input type="text" id="login2" class="form-control" aria-labelledby="login2">
+    <input type="text" id="login2" class="form-control js-active-label" aria-labelledby="login2">
     <label for="login2">Login</label>
     <div class="help-block">Проверьте правильность логина</div>
 </div>
 
 <div class="form-group form-group--active-label has-success">
-    <input type="text" id="email2" class="form-control" aria-labelledby="email2">
+    <input type="text" id="email2" class="form-control js-active-label" aria-labelledby="email2">
     <label for="email2">E-mail</label>
     <div class="help-block">Проверьте правильность e-mail адреса</div>
 </div>
 
 <div class="form-group form-group--active-label has-error">
-    <input type="text" id="address2" class="form-control" aria-labelledby="address2">
+    <input type="text" id="address2" class="form-control js-active-label" aria-labelledby="address2">
     <label for="address2">E-mail</label>
     <div class="help-block">Проверьте правильность адреса</div>
 </div>
+
+<!--Textarea -->
+<div class="test-item">
+    <div class="form-group form-group">
+        <label for="text">Type some text</label>
+        <textarea id="text" cols="30" rows="10" class="form-control form-control--textarea"></textarea>
+    </div>
+</div>
+
+<!--Textarea с активным лейблом-->
+<div class="test-item">
+    <div class="form-group form-group--active-label">
+        <textarea id="text2" cols="30" rows="10"
+                  class="form-control
+                  form-control--textarea
+                  form-control--textarea-flexible
+                  js-textarea
+                  js-active-label">
+        </textarea>
+        <label for="text2">Type some text</label>
+    </div>
+</div>
+
+<!--Инициализация плагинов focusField для инпутов и autosize для textarea-->
+<script src="../../js/plugins/jquery.js"></script>
+<script src="focusField.js"></script>
+<script src="../../js/plugins/autosize.min.js"></script>
+<script>
+    $('.js-active-label').each(function () {
+        $(this).focusField();
+    });
+    autosize($('.js-textarea'));
+</script>

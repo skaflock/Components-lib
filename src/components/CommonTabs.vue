@@ -7,7 +7,7 @@
             <li v-if="showJS" class="common-tab__link js-common-tab-link js-tab-link" data-href="js">JS</li>
         </ul>
         <div class="common-tab__content common-tab__content--frame js-tab-content current" data-content="view">
-            <iframe :src="htmlUrl" width="100%" height="400px" frameborder="0"></iframe>
+            <iframe :src="htmlUrl" width="100%" height="100%" frameborder="0"></iframe>
         </div>
         <div class="common-tab__content js-tab-content" data-content="html">
             <pre v-highlightjs="html"><code class="html"></code></pre>
