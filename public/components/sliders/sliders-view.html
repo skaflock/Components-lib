@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/plugins/slick/slick.css">
+    <link rel="stylesheet" href="../../styles/css/styles.min.css">
+</head>
+<body class="in-frame">
+
+    <h2>Обычный слайдер</h2>
+    <div class="test-row">
+        <!--Обычный слайдер-->
+        <div class="test-item">
+            <div class="slider-wrapper">
+                <ul class="slider js-slider">
+                    <li class="slider__item"><img src="../../img/game_of_thrones.jpeg" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-1.webp" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-2.jpg" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-3.jpg" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-4.jpg" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-5.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>Слайдер с центр-модом</h2>
+    <div class="test-row">
+        <!--Слайдер с центр-модом-->
+        <div class="test-item">
+            <div class="slider-wrapper">
+                <ul class="slider js-slider-center">
+                    <li class="slider__item"><img src="../../img/game_of_thrones.jpeg" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-1.webp" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-2.jpg" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-3.jpg" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-4.jpg" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-5.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>Слайдер с адаптивной высотой</h2>
+    <div class="test-row">
+        <!--Слайдер с адаптивной высотой-->
+        <div class="test-item">
+            <div class="slider-wrapper">
+                <ul class="slider js-slider-adheight">
+                    <li class="slider__item">
+                        <img src="../../img/game_of_thrones.jpeg" alt="">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate dignissimos dolore, exercitationem explicabo reiciendis velit? Amet deleniti dolore dolorem eligendi magni possimus quae quam repellat totam vitae! Architecto, dolor!</div>
+                    </li>
+                    <li class="slider__item">
+                        <img src="../../img/game_of_thrones-1.webp" alt="">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam atque beatae blanditiis culpa, cumque, eum eveniet facilis impedit itaque laboriosam nesciunt nisi nulla officia officiis pariatur sint ut vel vitae?</div>
+                    </li>
+                    <li class="slider__item">
+                        <img src="../../img/game_of_thrones-2.jpg" alt="">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus animi deleniti dolore eius eos explicabo illum iure laboriosam libero modi non, numquam odit perferendis porro quis, sequi soluta tempore?</div>
+                    </li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-3.jpg" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-4.jpg" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-5.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>Слайдер с вертикальной прокруткой</h2>
+    <div class="test-row">
+        <!--Слайдер с вертикальной прокруткой-->
+        <div class="test-item">
+            <div class="slider-wrapper">
+                <ul class="slider slider--vertical js-slider-vertical">
+                    <li class="slider__item"><img src="../../img/game_of_thrones.jpeg" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-1.webp" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-2.jpg" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-3.jpg" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-4.jpg" alt=""></li>
+                    <li class="slider__item"><img src="../../img/game_of_thrones-5.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/plugins/jquery.js"></script>
+    <script src="../../js/plugins/slick/slick.min.js"></script>
+    <script>
+        $('.js-slider').slick();
+        $('.js-slider-center').slick({
+            centerMode: true,
+            centerPadding: '120px',
+            slidesToShow: 1,
+            focusOnSelect: true
+        });
+        $('.js-slider-adheight').slick({
+            adaptiveHeight: true
+        })
+        $('.js-slider-vertical').slick({
+            vertical: true,
+            focusOnSelect: true,
+            adaptiveHeight: true
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!--Обычный слайдер-->
+<div class="slider-wrapper">
+    <ul class="slider js-slider">
+        <li class="slider__item"><img src="../../img/game_of_thrones.jpeg" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-1.webp" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-2.jpg" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-3.jpg" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-4.jpg" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-5.jpg" alt=""></li>
+    </ul>
+</div>
+
+<!--Слайдер с центр-модом-->
+<div class="slider-wrapper">
+    <ul class="slider js-slider-center">
+        <li class="slider__item"><img src="../../img/game_of_thrones.jpeg" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-1.webp" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-2.jpg" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-3.jpg" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-4.jpg" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-5.jpg" alt=""></li>
+    </ul>
+</div>
+
+<!--Слайдер с адаптивной высотой-->
+<div class="slider-wrapper">
+    <ul class="slider js-slider-adheight">
+        <li class="slider__item">
+            <img src="../../img/game_of_thrones.jpeg" alt="">
+        </li>
+        <li class="slider__item">
+            <img src="../../img/game_of_thrones-1.webp" alt="">
+        </li>
+        <li class="slider__item">
+            <img src="../../img/game_of_thrones-2.jpg" alt="">
+        </li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-3.jpg" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-4.jpg" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-5.jpg" alt=""></li>
+    </ul>
+</div>
+
+<!--Слайдер с вертикальной прокруткой-->
+<div class="slider-wrapper">
+    <ul class="slider slider--vertical js-slider-vertical">
+        <li class="slider__item"><img src="../../img/game_of_thrones.jpeg" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-1.webp" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-2.jpg" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-3.jpg" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-4.jpg" alt=""></li>
+        <li class="slider__item"><img src="../../img/game_of_thrones-5.jpg" alt=""></li>
+    </ul>
+</div>
+
+<!--Зависимости-->
+<script src="../../js/plugins/jquery.js"></script>
+<script src="../../js/plugins/slick/slick.min.js"></script>
+
+<!--Инициализация плагина-->
+<script>
+    $('.js-slider').slick();
+    $('.js-slider-center').slick({
+        centerMode: true,
+        centerPadding: '120px',
+        slidesToShow: 1,
+        focusOnSelect: true
+    });
+    $('.js-slider-adheight').slick({
+        adaptiveHeight: true
+    })
+    $('.js-slider-vertical').slick({
+        vertical: true,
+        focusOnSelect: true,
+        adaptiveHeight: true
+    })
+</script>

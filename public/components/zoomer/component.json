@@ -1,0 +1,11 @@
+{
+  "textInputs" : {
+    "name" : "Zoomer",
+    "category" : "Zoomer",
+    "htmlView" : "/components/zoomer/zoomer-view.html",
+    "html" : "/components/zoomer/zoomer.html",
+    "scss" : "/components/zoomer/zoomer.scss",
+    "js" : "/components/zoomer/zoomer.js"
+  }
+}
+

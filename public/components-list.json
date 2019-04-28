@@ -3,5 +3,8 @@
   "./components/common-tab/component.json",
   "./components/mobile-menu/component.json",
   "./components/stepper/component.json",
-  "./components/text-inputs/component.json"
+  "./components/form-elements/component.json",
+  "./components/zoomer/component.json",
+  "./components/select/component.json",
+  "./components/sliders/component.json"
 ]

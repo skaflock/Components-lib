@@ -19,6 +19,18 @@
     }
 }
 
+.download-link {
+    margin-right: 15px;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: underline;
+    color: $c-red;
+    &:hover {
+        color: $c-red;
+        text-decoration: none;
+    }
+}
+
 .common-tab__content--frame {
     background-color: #ffffff;
 }

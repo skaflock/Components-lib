@@ -1,11 +1,16 @@
+$c-white: #ffffff;
+$c-blue: #0078fe;
+$c-red: #ff033d;
+$c-grey-dark: #c1c1c1;
+
 .zoom-box-wrapper {
+    width: 600px;
+    height: 300px;
     padding: 0 30px;
-    @include media-breakpoint-down(md) {
-        padding: 0 20px;
-    }
 }
 .zoom-box {
-    height: 510px;
+    width: 100%;
+    height: 100%;
     position: relative;
     margin-bottom: 30px;
     overflow: hidden;
@@ -31,77 +36,82 @@
         object-fit: contain;
     }
 }
-&__controls {
-    position: absolute;
-    top: 60px;
-    left: 10px;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    height: 135px;
-}
-&__btn {
-    display: block;
-    width: 35px;
-    height: 35px;
-    padding: 0;
-    background-color: $c-white;
-    transition: border-color 0.3s ease-in-out;
-    &:not([disabled]) {
-        &:hover {
-            z-index: 100;
-            @include media-breakpoint-up(lg) {
+
+.zoom {
+    &__controls {
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        height: 135px;
+    }
+    &__btn {
+        display: block;
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        background-color: $c-white;
+        transition: border-color 0.3s ease-in-out;
+        &:not([disabled]) {
+            &:hover {
+                z-index: 100;
                 border-color: $c-red;
             }
         }
     }
-}
-&__btn-plus {
-    border: 1px solid $c-grey-dark;
-    border-radius: 4px 4px 0 0;
-    background-image: svg-load('../img/icons/plus-ico.svg', fill=$c-blue);
-    background-size: 16px 16px;
-    background-repeat: no-repeat;
-    background-position: center;
-    &:disabled {
-        background-image: svg-load('../img/icons/plus-ico.svg', fill=$c-grey-dark);
-    }
-}
-&__btn-minus {
-    position: relative;
-    border: 1px solid $c-grey-dark;
-    border-radius: 0 0 4px 4px;
-    margin-top: -1px;
-    &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 16px;
-        height: 4px;
-        background-color: $c-blue;
-        transform: translate(-50%, -50%);
-    }
-    &:disabled {
+    &__btn-plus,
+    &__btn-minus {
+        position: relative;
+        border: 1px solid $c-grey-dark;
+        &::after, &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: $c-blue;
+            transform: translate(-50%, -50%);
+        }
         &::after {
-            background-color: $c-grey-dark;
+            width: 16px;
+            height: 4px;
+        }
+        &:disabled {
+            &::after {
+                background-color: $c-grey-dark;
+            }
         }
     }
-}
-&__btn-scale,
-&__btn-unscale {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border: 1px solid $c-grey-dark;
-    border-radius: 4px;
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-&__btn-scale {
-    background-image: url("../img/icons/i-scale.svg");
-}
-&__btn-unscale {
-    background-image: url("../img/icons/i-unscale.svg");
+    &__btn-plus {
+        border-radius: 4px 4px 0 0;
+        &:before {
+            width: 4px;
+            height: 16px;
+        }
+        &:disabled {
+            &::before {
+                background-color: $c-grey-dark;
+            }
+        }
+    }
+    &__btn-minus {
+        border-radius: 0 0 4px 4px;
+        margin-top: -1px;
+    }
+    &__btn-scale,
+    &__btn-unscale {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $c-grey-dark;
+        border-radius: 4px;
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
 }

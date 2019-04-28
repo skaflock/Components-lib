@@ -1,0 +1,55 @@
+<!--Селект без поиска-->
+<select class="js-select">
+    <option value="Москва">Москва</option>
+    <option value="Санкт-Петербург">Санкт-Петербург</option>
+    <option value="Сочи">Сочи</option>
+    <option value="Севастополь">Севастополь</option>
+    <option value="Казань">Казань</option>
+    <option value="Екатеринбург">Екатеринбург</option>
+    <option value="Владивосток">Владивосток</option>
+    <option value="Находка">Находка</option>
+    <option value="Южно-Сахалинск">Южно-Сахалинск</option>
+    <option value="Южно-Курильск">Южно-Курильск</option>
+</select>
+
+<!--Селект с возможностью множественного выбора-->
+<!--Ставится атрибут multiple-->
+<select multiple class="js-select-multiple">
+    <option value="Москва">Москва</option>
+    <option value="Санкт-Петербург">Санкт-Петербург</option>
+    <option value="Сочи">Сочи</option>
+    <option value="Севастополь">Севастополь</option>
+    <option value="Казань">Казань</option>
+    <option value="Екатеринбург">Екатеринбург</option>
+    <option value="Владивосток">Владивосток</option>
+    <option value="Находка">Находка</option>
+    <option value="Южно-Сахалинск">Южно-Сахалинск</option>
+    <option value="Южно-Курильск">Южно-Курильск</option>
+</select>
+
+<!--Селект с поиском-->
+<select class="js-select-with-search">
+    <option value="Москва">Москва</option>
+    <option value="Санкт-Петербург">Санкт-Петербург</option>
+    <option value="Сочи">Сочи</option>
+    <option value="Севастополь">Севастополь</option>
+    <option value="Казань">Казань</option>
+    <option value="Екатеринбург">Екатеринбург</option>
+    <option value="Владивосток">Владивосток</option>
+    <option value="Находка">Находка</option>
+    <option value="Южно-Сахалинск">Южно-Сахалинск</option>
+    <option value="Южно-Курильск">Южно-Курильск</option>
+</select>
+
+<!--Зависимости-->
+<script src="../../js/plugins/jquery.js"></script>
+<script src="../../js/plugins/select2/select2.full.min.js"></script>
+
+<!--Инициализация плагина-->
+<script>
+    $('.js-select').select2({minimumResultsForSearch: -1});
+    $('.js-select-multiple').select2({
+        placeholder: 'Choose cities'
+    });
+    $('.js-select-with-search').select2();
+</script>
