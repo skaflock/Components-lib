@@ -2,13 +2,11 @@
     <div id="app">
         <div class="page-wrapper">
             <header class="header">
-                <div class="container">
-                    <div class="header__content">
-                        <span class="header__logo">
-                            <img src="../public/img/header-logo.png" alt="Logo">
-                        </span>
-                        <p class="header__text">Библиотека компонентов Студии Валерия Комягина</p>
-                    </div>
+                <div class="header__content">
+                    <span class="header__logo">
+                        <img src="../public/img/header-logo.png" alt="Logo">
+                    </span>
+                    <p class="header__text">Библиотека компонентов Студии Валерия Комягина</p>
                 </div>
             </header>
             <sidebar :components="components"/>
@@ -17,11 +15,6 @@
                         ref="componentsList"
                 />
             </main>
-            <footer class="footer">
-                <div class="container">
-                    Здесь может быть Ваша реклама!
-                </div>
-            </footer>
         </div>
     </div>
 </template>

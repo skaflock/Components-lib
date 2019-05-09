@@ -1,7 +1,7 @@
 {
   "commonTabs" : {
     "name" : "Обычные табы",
-    "category" : "Табы",
+    "category" : "Tabs",
     "htmlView" : "/components/common-tab/common-tab-view.html",
     "html" : "/components/common-tab/common-tab.html",
     "scss" : "/components/common-tab/common-tab.scss",

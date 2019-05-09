@@ -50,14 +50,10 @@ h1 {
 }
 
 h2 {
-    margin-bottom: 15px;
-    font-size: 20px;
-    line-height: 1.25;
-    text-align: center;
-    @media (max-width: $md-point) {
-        font-size: 16px;
-        line-height: 24px;
-    }
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-size: 30px;
+    line-height: 32px;
 }
 
 .test-row {
