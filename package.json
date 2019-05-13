@@ -39,6 +39,7 @@
     "postcss-inline-svg": "^3.0.0",
     "pump": "^1.0.3",
     "sass-loader": "^7.1.0",
+    "vue-friendly-iframe": "^0.12.0",
     "vue-markdown-highlight": "^1.0.5",
     "vue-template-compiler": "^2.5.21"
   },

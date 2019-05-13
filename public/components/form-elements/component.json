@@ -1,0 +1,11 @@
+{
+  "textInputs" : {
+    "name" : "Элементы формы",
+    "category" : "Form elements",
+    "htmlView" : "/components/form-elements/form-elements-view.html",
+    "html" : "/components/form-elements/form-elements.html",
+    "scss" : "/components/form-elements/forms.scss",
+    "js" : "/components/form-elements/focusField.js"
+  }
+}
+

@@ -10,6 +10,7 @@
 </head>
 <body class="in-frame">
 
+    <h2>Обычные инпуты</h2>
     <div class="test-row">
         <!--Обычные инпуты-->
         <div class="test-item">
@@ -37,6 +38,7 @@
         </div>
     </div>
 
+    <h2>Инпуты с активным лейблом</h2>
     <div class="test-row">
         <!--Инпуты с активным лейблом-->
         <div class="test-item">
@@ -69,7 +71,7 @@
         <!--Textarea -->
         <div class="test-item">
             <div class="form-group form-group">
-                <label for="text">Type some text</label>
+                <label for="text">Textarea со скроллом</label>
                 <textarea id="text" cols="30" rows="10" class="form-control form-control--textarea"></textarea>
             </div>
         </div>
@@ -84,7 +86,62 @@
                           form-control--textarea-flexible
                           js-textarea
                           js-active-label"></textarea>
-                <label for="text2">Type some text</label>
+                <label for="text2">Textarea резиновый</label>
+            </div>
+        </div>
+    </div>
+
+    <h2>Чекбоксы</h2>
+    <div class="test-row">
+        <div class="test-item">
+            <div class="form-group">
+                <div class="checkbox-input">
+                    <label>
+                        Я согласен с правилами
+                        <input type="checkbox">
+                        <div class="checkbox-input__icon"></div>
+                        <span class="help-block">Подтвердите согласие</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-item">
+            <div class="form-group">
+                <div class="checkbox-input disabled">
+                    <label>
+                        Я согласен с правилами
+                        <input type="checkbox" disabled="">
+                        <div class="checkbox-input__icon"></div>
+                        <span class="help-block">Подтвердите согласие</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-item">
+            <div class="form-group has-success">
+                <div class="checkbox-input">
+                    <label>
+                        Я согласен с правилами
+                        <input type="checkbox">
+                        <div class="checkbox-input__icon"></div>
+                        <span class="help-block">Подтвердите согласие</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-item">
+            <div class="form-group has-error">
+                <div class="checkbox-input">
+                    <label>
+                        Я согласен с правилами
+                        <input type="checkbox">
+                        <div class="checkbox-input__icon"></div>
+                        <span class="help-block">Подтвердите согласие</span>
+                    </label>
+                </div>
             </div>
         </div>
     </div>

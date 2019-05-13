@@ -1,0 +1,12 @@
+{
+  "textInputs" : {
+    "name" : "Zoomer",
+    "category" : "Zoomer",
+    "description" : "Компонент увеличения / уменьшения изображений",
+    "htmlView" : "/components/zoomer/zoomer-view.html",
+    "html" : "/components/zoomer/zoomer.html",
+    "scss" : "/components/zoomer/zoomer.scss",
+    "js" : "/components/zoomer/zoomer.js"
+  }
+}
+

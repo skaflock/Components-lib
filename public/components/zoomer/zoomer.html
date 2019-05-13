@@ -1,13 +1,25 @@
 <div class="zoom-box-wrapper">
     <div class="zoom-box js-zoom-box">
         <div class="zoom-content js-zoom-content">
-            <img src="../../img/header-logo.png" alt="схема зала" class="zoom-image js-zoom-image">
+            <img src="" alt="схема зала" class="zoom-image js-zoom-image">
         </div>
-        <div class="scheme__controls">
-            <button type="button" class="scheme__btn-plus scheme__btn js-zoom-plus"></button>
-            <button type="button" class="scheme__btn-minus scheme__btn js-zoom-minus" disabled></button>
-            <button type="button" class="scheme__btn-scale scheme__btn js-max-scale"></button>
-            <button type="button" class="scheme__btn-unscale scheme__btn js-unscale" style="display: none"></button>
+        <div class="zoom__controls">
+            <button type="button" class="zoom__btn-plus zoom__btn js-zoom-plus"></button>
+            <button type="button" class="zoom__btn-minus zoom__btn js-zoom-minus" disabled></button>
+            <button type="button" class="zoom__btn-scale zoom__btn js-max-scale"></button>
+            <button type="button" class="zoom__btn-unscale zoom__btn js-unscale" style="display: none"></button>
         </div>
     </div>
 </div>
+
+<!--Зависимости-->
+<script src="../../js/plugins/jquery.js"></script>
+<script src="../../js/plugins/jquery-ui-draggable/jquery.draggableTouch.js"></script>
+<script src="../../js/plugins/jquery-ui-draggable/jquery-ui.min.js"></script>
+<script src="../../js/plugins/jquery-ui-draggable/jquery.ui.touch-punch.min.js"></script>
+<script src="zoomer.js"></script>
+
+<!--Инициализация плагина-->
+<script>
+    $('.js-zoom-box').zoom();
+</script>

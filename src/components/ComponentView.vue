@@ -1,9 +1,13 @@
 <template>
     <li>
         <div class="component-name">{{ name }}</div>
+        <div class="component-description">{{ description }}</div>
+        <div class="component-links">
+            <a :href="scssUrl" download class="component-links__link">Скачать стили</a>
+            <a v-if="typeof component.npmUrl !== 'undefined'" :href="npmUrl" class="component-links__link">Ссылка на npm</a>
+        </div>
         <common-tabs></common-tabs>
-        <a v-if="typeof component.npmUrl !== 'undefined'" :href="npmUrl">Ссылка на npm</a>
-        <a :href="scssUrl" download>Скачать стили</a>
+
     </li>
 </template>
 
@@ -21,6 +25,11 @@
             name() {
                 return this.component.name
             },
+            description() {
+                if (typeof this.component.description !== 'undefined') {
+                    return this.component.description
+                }
+            },
             npmUrl() {
                 return this.component.npmUrl
             },
@@ -36,3 +45,6 @@
         }
     }
 </script>
+<style lang="scss">
+    @import "../../public/styles/scss/common-styles.scss";
+</style>

@@ -43,6 +43,11 @@
         },
         methods: {
             init() {
+                const $iframe = $('iframe');
+                $iframe.on('load', function() {
+                    this.style.height = this.contentDocument.body.scrollHeight +'px';
+                });
+
                 if (this.$store.state.componentJs !== null) {
                     this.showJS = true;
                 } else {
@@ -74,5 +79,53 @@
 </script>
 
 <style scoped lang="scss">
-    @import "../../public/components/common-tab/common-tab";
+    $c-black: #2b2b2b;
+    $c-white: #ffffff;
+    $c-green: #11b267;
+
+    .common-tab {
+        &__header {
+            display: flex;
+            border-bottom: 1px solid #E6E6E6;
+        }
+        &__link {
+            height: 100%;
+            margin-right: 30px;
+            margin-bottom: -1px;
+            padding: 0 0 12px;
+            font-size: 16px;
+            line-height: 18px;
+            background-color: $c-white;
+            color: rgba(1, 1, 1, 0.6);
+            transition: color 0.3s ease-in-out;
+            cursor: pointer;
+            &.current,
+            &:hover {
+                color: #010101;
+                border-bottom: 1px solid #343434;
+            }
+        }
+        &__content {
+            display: none;
+            padding: 50px 0 0;
+            background-color: $c-black;
+            color: $c-green;
+            font-size: 14px;
+            line-height: 1.5;
+            pre {
+                width: 100%;
+                height: 100%;
+                background-color: $c-black;
+                color: $c-green;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            &.current {
+                display: block;
+            }
+            &--frame {
+                background-color: $c-white;
+            }
+        }
+    }
 </style>

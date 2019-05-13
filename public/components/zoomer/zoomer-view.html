@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/css/styles.min.css">
+</head>
+<body class="in-frame">
+
+<div class="test-row">
+
+    <div class="zoom-box-wrapper">
+        <div class="zoom-box js-zoom-box">
+            <div class="zoom-content js-zoom-content">
+                <img src="../../img/game_of_thrones.jpeg" alt="схема зала" class="zoom-image js-zoom-image">
+            </div>
+            <div class="zoom__controls">
+                <button type="button" class="zoom__btn-plus zoom__btn js-zoom-plus"></button>
+                <button type="button" class="zoom__btn-minus zoom__btn js-zoom-minus" disabled></button>
+                <button type="button" class="zoom__btn-scale zoom__btn js-max-scale">
+                    <img src="icons/i-scale.svg" alt="">
+                </button>
+                <button type="button" class="zoom__btn-unscale zoom__btn js-unscale" style="display: none">
+                    <img src="icons/i-unscale.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="../../js/plugins/jquery.js"></script>
+<script src="../../js/plugins/jquery-ui-draggable/jquery.draggableTouch.js"></script>
+<script src="../../js/plugins/jquery-ui-draggable/jquery-ui.min.js"></script>
+<script src="../../js/plugins/jquery-ui-draggable/jquery.ui.touch-punch.min.js"></script>
+<script src="zoomer.js"></script>
+<script>
+    $('.js-zoom-box').zoom();
+</script>
+</body>
+</html>

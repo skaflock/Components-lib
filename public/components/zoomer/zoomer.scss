@@ -1,11 +1,15 @@
+$c-white: #ffffff;
+$c-blue: #0078fe;
+$c-red: #ff033d;
+$c-grey-dark: #c1c1c1;
+
 .zoom-box-wrapper {
-    padding: 0 30px;
-    @media (max-width: 992px) {
-        padding: 0 20px;
-    }
+    width: 600px;
+    height: 300px;
 }
 .zoom-box {
-    height: 510px;
+    width: 100%;
+    height: 100%;
     position: relative;
     margin-bottom: 30px;
     overflow: hidden;
@@ -31,7 +35,8 @@
         object-fit: contain;
     }
 }
-.scheme {
+
+.zoom {
     &__controls {
         position: absolute;
         top: 60px;
@@ -46,64 +51,66 @@
         width: 35px;
         height: 35px;
         padding: 0;
-        background-color: #fff;
+        background-color: $c-white;
         transition: border-color 0.3s ease-in-out;
         &:not([disabled]) {
             &:hover {
                 z-index: 100;
-                @media (min-width: 1200px) {
-                    border-color: #f00;
-                }
+                border-color: $c-red;
             }
         }
     }
-    &__btn-plus {
-        border: 1px solid #666;
-        border-radius: 4px 4px 0 0;
-        //background-image: svg-load('../img/icons/plus-ico.svg', fill=#00f);
-        background-size: 16px 16px;
-        background-repeat: no-repeat;
-        background-position: center;
-        &:disabled {
-            //background-image: svg-load('../img/icons/plus-ico.svg', fill=#666);
-        }
-    }
+    &__btn-plus,
     &__btn-minus {
         position: relative;
-        border: 1px solid #666;
-        border-radius: 0 0 4px 4px;
-        margin-top: -1px;
-        &::after {
+        border: 1px solid $c-grey-dark;
+        &::after, &::before {
             content: '';
             position: absolute;
             top: 50%;
             left: 50%;
+            background-color: $c-blue;
+            transform: translate(-50%, -50%);
+        }
+        &::after {
             width: 16px;
             height: 4px;
-            background-color: #00f;
-            transform: translate(-50%, -50%);
         }
         &:disabled {
             &::after {
-                background-color: #666;
+                background-color: $c-grey-dark;
             }
         }
+    }
+    &__btn-plus {
+        border-radius: 4px 4px 0 0;
+        &:before {
+            width: 4px;
+            height: 16px;
+        }
+        &:disabled {
+            &::before {
+                background-color: $c-grey-dark;
+            }
+        }
+    }
+    &__btn-minus {
+        border-radius: 0 0 4px 4px;
+        margin-top: -1px;
     }
     &__btn-scale,
     &__btn-unscale {
         position: absolute;
         bottom: 0;
         left: 0;
-        border: 1px solid #666;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $c-grey-dark;
         border-radius: 4px;
-        background-size: 24px 24px;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    &__btn-scale {
-        background-image: url("../img/icons/i-scale.svg");
-    }
-    &__btn-unscale {
-        background-image: url("../img/icons/i-unscale.svg");
+        img {
+            width: 24px;
+            height: 24px;
+        }
     }
 }

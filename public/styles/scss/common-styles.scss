@@ -22,3 +22,35 @@
 .common-tab__content--frame {
     background-color: #ffffff;
 }
+
+.component-name {
+    margin-bottom: 35px;
+    font-size: 50px;
+    line-height: 1;
+    color: #000000;
+}
+
+.component-description {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #343434;
+}
+
+.component-links {
+    display: flex;
+    &__link {
+        height: 50px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        padding: 0 25px;
+        font-size: 14px;
+        line-height: 50px;
+        color: #FFB301;
+        background: #343434;
+        border-radius: 25px;
+        &:hover {
+            color: #FFB301;
+        }
+    }
+}

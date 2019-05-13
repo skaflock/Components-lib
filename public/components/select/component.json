@@ -1,0 +1,10 @@
+{
+  "stepper" : {
+    "name" : "Селекты",
+    "category" : "Selects",
+    "htmlView" : "/components/select/select-view.html",
+    "html" : "/components/select/select.html",
+    "scss" : "/components/select/select.scss"
+  }
+}
+
