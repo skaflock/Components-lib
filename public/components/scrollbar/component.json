@@ -1,0 +1,11 @@
+{
+  "stepper" : {
+    "name" : "Полоса прокрутки",
+    "category" : "Полоса прокрутки",
+    "htmlView" : "/components/scrollbar/scrollbar-view.html",
+    "html" : "/components/scrollbar/scrollbar.html",
+    "scss" : "/components/scrollbar/scrollbar.scss",
+    "js" : "/components/scrollbar/scrollbar.js"
+  }
+}
+

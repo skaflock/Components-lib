@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/css/styles.min.css">
+</head>
+<body class="in-frame">
+
+    <div class="test-row">
+
+        <div class="test-item">
+            <div class="c-stepper js-c-stepper">
+                <button type="button" tabindex="-1"
+                        class="c-stepper__decrement js-c-stepper__down"></button>
+                <input type="text" data-min="1" data-max="10" class="c-stepper__value js-stepper__num" value="1" title="">
+                <button type="button" tabindex="-1"
+                        class="c-stepper__increment js-c-stepper__up"></button>
+            </div>
+        </div>
+
+        <div class="test-item">
+            <div class="c-stepper js-c-stepper-with-tooltip" data-tooltip-text="10 максимум">
+                <button type="button" tabindex="-1"
+                        class="c-stepper__decrement js-c-stepper__down"></button>
+                <input type="text" data-min="1" data-max="10" class="c-stepper__value js-stepper__num" value="1" title="">
+                <button type="button" tabindex="-1"
+                        class="c-stepper__increment js-c-stepper__up"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/plugins/jquery.js"></script>
+    <script src="stepper.js"></script>
+    <script>
+        /**
+         * Custom scroll with touch drag support
+         */
+        var $listWrap = $('.js-store-list-zzz');
+        var $list = $('.js-map-scroll-zzz');
+
+        // инициализируем кастомный скролл после загрузки списка
+        var listHeightInterval = setInterval(function () {
+            if ($list.get(0).scrollHeight > $list.get(0).clientHeight) {
+                $list.css({
+                    // прячем стандартный скроллбар за правой границей блока
+                    'margin-right': $list.get(0).clientWidth - $listWrap.get(0).clientWidth + 'px'
+                });
+                var scrollTimeout;
+                var $ddRail = $('<div/>').addClass('dragdealer').appendTo($listWrap);
+                var $ddHandle = $('<div/>').addClass('handle').appendTo($ddRail);
+                $ddRail.data('dragdealer', new Dragdealer($ddRail.get(0), {
+                    slide: false,
+                    horizontal: false,
+                    vertical: true,
+                    animationCallback: function (x, y) {
+                        if (!$list.hasClass('scrolling')) {
+                            $list.scrollTop(y * ($list.get(0).scrollHeight - $listWrap.height()));
+                        }
+                    }
+                }));
+                $list.on('scroll', function () {
+                    if (!$ddRail.hasClass('active')) {
+                        $list.addClass('scrolling');
+                        $ddRail.data('dragdealer').setValue(0, $list.get(0).scrollTop / $list.get(0).scrollHeight);
+                        clearTimeout(scrollTimeout);
+                        scrollTimeout = setTimeout(function () {
+                            $list.removeClass('scrolling');
+                        }, 100);
+                    }
+
+                });
+                clearInterval(listHeightInterval);
+            } else {
+                if ($listWrap.find('.dragdealer').length) {
+                    $listWrap.find('.dragdealer').remove();
+                }
+            }
+        }, 500);
+
+        $('.js-c-stepper').stepper();
+        $('.js-c-stepper-with-tooltip').stepper({tooltip: true});
+    </script>
+</body>
+</html>
