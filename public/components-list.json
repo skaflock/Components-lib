@@ -1,10 +1,11 @@
 [
   "./components/common-spoiler/component.json",
   "./components/common-tab/component.json",
-  "./components/mobile-menu/component.json",
-  "./components/stepper/component.json",
   "./components/form-elements/component.json",
-  "./components/zoomer/component.json",
+  "./components/mobile-menu/component.json",
+  "./components/scrollbar/component.json",
   "./components/select/component.json",
-  "./components/sliders/component.json"
+  "./components/sliders/component.json",
+  "./components/stepper/component.json",
+  "./components/zoomer/component.json"
 ]
