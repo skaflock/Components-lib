@@ -20,9 +20,7 @@
 
         $inner.css({
             position: 'relative',
-            backgroundColor: 'magenta',
-            overflowX: 'hidden',
-            overflowY: 'auto',
+            overflow: 'hidden auto',
             height: '100%'
         });
 
@@ -34,24 +32,31 @@
             var scrollTimeout;
             var $ddRail = $('<div/>').addClass('dragdealer').appendTo($container);
             var $ddHandle = $('<div/>').addClass('handle').appendTo($ddRail);
+            $ddHandle.css({
+                height: Math.max(50, Math.ceil($container.height() * ($container.height() / $inner.get(0).scrollHeight))) + 'px'
+            });
             $ddRail.data('dragdealer', new Dragdealer($ddRail.get(0), {
-                slide: false,
                 horizontal: false,
                 vertical: true,
+                slide: false,
                 animationCallback: function (x, y) {
                     if (!$inner.hasClass('scrolling')) {
                         $inner.scrollTop(y * ($inner.get(0).scrollHeight - $container.height()));
                     }
                 }
             }));
-            $inner.on('scroll', function () {
+            $inner.on('scroll', {passive: true}, function () {
+                var scrollTop = $inner.get(0).scrollTop;
+                var scrollHeight = $inner.get(0).scrollHeight;
+                var containerHeight = $container.height();
+                var ddValue = $ddRail.data('dragdealer').getValue()[1];
                 if (!$ddRail.hasClass('active')) {
                     $inner.addClass('scrolling');
-                    $ddRail.data('dragdealer').setValue(0, $inner.get(0).scrollTop / $inner.get(0).scrollHeight);
+                    $ddRail.data('dragdealer').setValue(0, (scrollTop + (ddValue * containerHeight)) / scrollHeight);
                     clearTimeout(scrollTimeout);
                     scrollTimeout = setTimeout(function () {
                         $inner.removeClass('scrolling');
-                    }, 200);
+                    }, 1000);
                 }
 
             });
