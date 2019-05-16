@@ -1,0 +1,29 @@
+.scroll {
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+
+    ul {
+        margin: 0;
+    }
+}
+
+.dragdealer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    background-color: #e5e5e5;
+
+    .handle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        min-height: 50px;
+        background-color: #c1c1c1;
+        cursor: pointer;
+    }
+}

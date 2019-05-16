@@ -1,0 +1,21 @@
+.collapsible {
+    &-toggle {
+        &::before {
+            content: attr(data-text-collapse);
+        }
+    }
+
+    .collapsed &-toggle {
+        &::before {
+            content: attr(data-text-expand);
+        }
+    }
+
+    &-content {
+        overflow: hidden;
+        transition: margin .2s;
+        p:first-child {
+            margin-top: 0;
+        }
+    }
+}
