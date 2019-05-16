@@ -1,4 +1,5 @@
 [
+  "./components/collapsible/component.json",
   "./components/common-spoiler/component.json",
   "./components/common-tab/component.json",
   "./components/form-elements/component.json",

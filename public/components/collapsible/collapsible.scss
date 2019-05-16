@@ -1,0 +1,13 @@
+.collapsible {
+    &-toggle {
+        &::before {
+            content: attr(data-text-collapse);
+        }
+    }
+
+    .collapsed &-toggle {
+        &::before {
+            content: attr(data-text-expand);
+        }
+    }
+}

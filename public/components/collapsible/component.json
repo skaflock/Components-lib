@@ -1,0 +1,11 @@
+{
+  "stepper" : {
+    "name" : "Сворачиваемый блок",
+    "category" : "Collapsible",
+    "htmlView" : "/components/scrollbar/collapsible-view.html",
+    "html" : "/components/collapsible/collapsible.html",
+    "scss" : "/components/collapsible/collapsible.scss",
+    "js" : "/components/collapsible/collapsible.js"
+  }
+}
+
