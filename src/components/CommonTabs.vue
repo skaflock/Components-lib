@@ -46,6 +46,7 @@
                 const $iframe = $('iframe');
                 $iframe.on('load', function() {
                     this.style.height = this.contentDocument.body.scrollHeight +'px';
+                    this.style.minHeight = '500px'
                 });
 
                 if (this.$store.state.componentJs !== null) {

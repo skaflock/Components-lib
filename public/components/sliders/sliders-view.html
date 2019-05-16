@@ -91,20 +91,36 @@
     <script src="../../js/plugins/jquery.js"></script>
     <script src="../../js/plugins/slick/slick.min.js"></script>
     <script>
-        $('.js-slider').slick();
+        // Обычный слайдер
+        $('.js-slider').slick({
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>'
+        });
+
+        // Слайдер с центр-модом
         $('.js-slider-center').slick({
             centerMode: true,
             centerPadding: '120px',
             slidesToShow: 1,
-            focusOnSelect: true
+            focusOnSelect: true,
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>'
         });
+
+        // Слайдер с адаптивной высотой
         $('.js-slider-adheight').slick({
-            adaptiveHeight: true
-        })
+            adaptiveHeight: true,
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>'
+        });
+
+        // Слайдер с вертикальной прокруткой
         $('.js-slider-vertical').slick({
             vertical: true,
             focusOnSelect: true,
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>'
         })
     </script>
 </body>
