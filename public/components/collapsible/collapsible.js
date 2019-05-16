@@ -1,5 +1,4 @@
 (function ($) {
-    // jshint devel: true
     // jshint jquery: true
     'use strict';
 
@@ -15,8 +14,8 @@
     $.fn.collapsible = function (options) {
         var defaults = {
             collapsedClass: 'collapsed',
-            contentSelector: '.js-collapse-content',
-            toggleSelector: '.js-collapse-toggle',
+            contentSelector: '.js-collapsible-content',
+            toggleSelector: '.js-collapsible-toggle',
             slide: true
         };
         var settings = $.extend({}, defaults, options);

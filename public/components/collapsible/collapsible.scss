@@ -10,4 +10,12 @@
             content: attr(data-text-expand);
         }
     }
+
+    &-content {
+        overflow: hidden;
+        transition: margin .2s;
+        p:first-child {
+            margin-top: 0;
+        }
+    }
 }
