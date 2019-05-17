@@ -4,7 +4,17 @@
     "category" : "Sliders",
     "htmlView" : "/components/sliders/sliders-view.html",
     "html" : "/components/sliders/sliders.html",
-    "scss" : "/components/sliders/sliders.scss"
+    "scss" : "/components/sliders/sliders.scss",
+    "dependences" : [
+      {
+        "name" : "jQuery",
+        "link" : "https://jquery.com/download/"
+      },
+      {
+        "name" : "slick",
+        "link" : "https://kenwheeler.github.io/slick/"
+      }
+    ]
   }
 }
 

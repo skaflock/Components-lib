@@ -5,7 +5,17 @@
     "htmlView" : "/components/form-elements/form-elements-view.html",
     "html" : "/components/form-elements/form-elements.html",
     "scss" : "/components/form-elements/forms.scss",
-    "js" : "/components/form-elements/focusField.js"
+    "js" : "/components/form-elements/focusField.js",
+    "dependences" : [
+      {
+        "name" : "jQuery",
+        "link" : "https://jquery.com/download/"
+      },
+      {
+        "name" : "autosize",
+        "link" : "https://github.com/jackmoore/autosize"
+      }
+    ]
   }
 }
 

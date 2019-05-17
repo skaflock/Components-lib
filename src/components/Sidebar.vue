@@ -18,9 +18,9 @@
         name: "Sidebar",
         props: ["components"],
         data() {
-            return {
-                selectedCategoryIndex : 0
-            }
+          return {
+              selectedCategoryIndex: null
+          }
         },
         computed: {
             ...mapGetters({
@@ -30,11 +30,16 @@
         },
         methods : {
             changeCategory(index) {
-                this.selectedCategoryIndex = index;
                 this.$store.dispatch('setCurrentCategory',this.$store.state.categories[index]);
+                this.selectedCategoryIndex = index;
                 const filteredComponents = this.components.filter(component => component.category === this.$store.state.currentCategory);
                 this.$store.dispatch('loadCurrentComponents', filteredComponents);
+                let currentPath = this.$store.state.categories[index].toLowerCase().replace(/ /g, '_');
+                this.$router.push({ params: {category: currentPath}});
             }
+        },
+        updated() {
+            this.selectedCategoryIndex = this.categories.indexOf(this.$route.params.category.charAt(0).toUpperCase() + this.$route.params.category.slice(1));
         }
     }
 

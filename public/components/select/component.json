@@ -4,7 +4,17 @@
     "category" : "Selects",
     "htmlView" : "/components/select/select-view.html",
     "html" : "/components/select/select.html",
-    "scss" : "/components/select/select.scss"
+    "scss" : "/components/select/select.scss",
+    "dependences" : [
+      {
+        "name" : "jQuery",
+        "link" : "https://jquery.com/download/"
+      },
+      {
+        "name" : "select2",
+        "link" : "http://select2.github.io/select2/"
+      }
+    ]
   }
 }
 

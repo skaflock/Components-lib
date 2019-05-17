@@ -12,7 +12,8 @@ export default new Vuex.Store({
         componentHtml: null,
         componentScss: null,
         componentJs: null,
-        componentHtmlUrl: null
+        componentHtmlUrl: null,
+        dependences: []
     },
     mutations: {
         loadCategories(state, categories) {
@@ -38,6 +39,9 @@ export default new Vuex.Store({
         },
         loadComponentHtmlUrl(state, url) {
             state.componentHtmlUrl = url;
+        },
+        loadDependences(state, dependences) {
+            state.dependences = dependences;
         }
     },
     actions: {
@@ -53,12 +57,16 @@ export default new Vuex.Store({
         loadComponent(context, component) {
             context.commit('loadComponent', component);
             context.commit('loadComponentHtmlUrl', component.htmlView);
+            context.commit('loadDependences', component.dependences);
+
             fetch(component.html)
                 .then(response => response.text())
                 .then(data => context.commit('loadComponentHtml', data));
+
             fetch(component.scss)
                 .then(response => response.text())
                 .then(data => context.commit('loadComponentScss', data));
+
             if (typeof component.js !== 'undefined') {
                 fetch(component.js)
                     .then(response => response.text())
@@ -76,6 +84,7 @@ export default new Vuex.Store({
         getComponentHtmlUrl: state => state.componentHtmlUrl,
         getComponentHtml: state => state.componentHtml,
         getComponentScss: state => state.componentScss,
-        getComponentJs: state => state.componentJs
+        getComponentJs: state => state.componentJs,
+        getDependences: state => state.dependences
     }
 })

@@ -5,7 +5,13 @@
     "htmlView" : "/components/mobile-menu/mobile-menu-view.html",
     "html" : "/components/mobile-menu/mobile-menu.html",
     "scss" : "/components/mobile-menu/mobile-menu.scss",
-    "js" : "/components/mobile-menu/mobileMenu.js"
+    "js" : "/components/mobile-menu/mobileMenu.js",
+    "dependences" : [
+      {
+        "name" : "jQuery",
+        "link" : "https://jquery.com/download/"
+      }
+    ]
   }
 }
 

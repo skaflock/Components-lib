@@ -1,12 +1,14 @@
 <template>
-    <ul class="components-list">
-        <component-view
-            v-for="component in components"
-            :key="component.id"
-            :component="component"
-        >
-        </component-view>
-    </ul>
+    <main class="main">
+        <ul class="components-list">
+            <component-view
+                    v-for="component in components"
+                    :key="component.id"
+                    :component="component"
+            >
+            </component-view>
+        </ul>
+    </main>
 </template>
 
 <script>
@@ -18,9 +20,13 @@
         components: {ComponentView},
         computed: {
             ...mapGetters({
-                components: 'getCurrentComponents',
-                currentCategory: 'getCurrentCategory'
+                components: 'getCurrentComponents'
             })
+        },
+        watch: {
+            '$route.params.category'(category) {
+                this.$store.dispatch('setCurrentCategory',category);
+            }
         }
     }
 </script>

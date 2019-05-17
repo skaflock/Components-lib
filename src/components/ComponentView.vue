@@ -28,6 +28,8 @@
             description() {
                 if (typeof this.component.description !== 'undefined') {
                     return this.component.description
+                } else {
+                    return null;
                 }
             },
             npmUrl() {

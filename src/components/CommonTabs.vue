@@ -5,6 +5,7 @@
             <li class="common-tab__link js-common-tab-link js-tab-link" data-href="html">HTML</li>
             <li class="common-tab__link js-common-tab-link js-tab-link" data-href="scss">SCSS</li>
             <li v-if="showJS" class="common-tab__link js-common-tab-link js-tab-link" data-href="js">JS</li>
+            <li class="common-tab__link js-common-tab-link js-tab-link" data-href="dependences">Зависимости</li>
         </ul>
         <div class="common-tab__content common-tab__content--frame js-tab-content current" data-content="view">
             <iframe :src="htmlUrl" width="100%" height="100%" frameborder="0"></iframe>
@@ -17,6 +18,13 @@
         </div>
         <div v-if="showJS" class="common-tab__content js-tab-content" data-content="js">
             <pre v-highlightjs="js"><code class="javascript"></code></pre>
+        </div>
+        <div class="common-tab__content common-tab__content--dependences js-tab-content" data-content="dependences">
+            <ul>
+                <li v-for="item in dependences" :key="item.id">
+                    <a :href="item.link" target="_blank" class="component-links__link">{{item.name}}</a>
+                </li>
+            </ul>
         </div>
     </div>
 </template>
@@ -38,7 +46,8 @@
                 htmlUrl: 'getComponentHtmlUrl',
                 html: 'getComponentHtml',
                 scss: 'getComponentScss',
-                js: 'getComponentJs'
+                js: 'getComponentJs',
+                dependences: 'getDependences'
             })
         },
         methods: {
@@ -75,6 +84,11 @@
         },
         mounted() {
             setTimeout(() => {this.init();}, 300);
+        },
+        watch: {
+            '$route.params.category'() {
+                this.init();
+            }
         }
     }
 </script>
@@ -126,6 +140,15 @@
             }
             &--frame {
                 background-color: $c-white;
+            }
+            &--dependences {
+                background-color: $c-white;
+                ul {
+                    display: flex;
+                    li {
+                        margin-right: 20px;
+                    }
+                }
             }
         }
     }

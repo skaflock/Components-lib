@@ -6,7 +6,17 @@
     "htmlView" : "/components/zoomer/zoomer-view.html",
     "html" : "/components/zoomer/zoomer.html",
     "scss" : "/components/zoomer/zoomer.scss",
-    "js" : "/components/zoomer/zoomer.js"
+    "js" : "/components/zoomer/zoomer.js",
+    "dependences" : [
+      {
+        "name" : "jQuery",
+        "link" : "https://jquery.com/download/"
+      },
+      {
+        "name" : "jquery-ui-draggable",
+        "link" : "https://jqueryui.com/draggable/"
+      }
+    ]
   }
 }
 
