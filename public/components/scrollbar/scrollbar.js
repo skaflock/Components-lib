@@ -52,11 +52,11 @@
                 var ddValue = $ddRail.data('dragdealer').getValue()[1];
                 if (!$ddRail.hasClass('active')) {
                     $inner.addClass('scrolling');
-                    $ddRail.data('dragdealer').setValue(0, (scrollTop + (ddValue * containerHeight)) / scrollHeight);
+                    $ddRail.data('dragdealer').setValue(0, (scrollTop + (ddValue * containerHeight)) / scrollHeight, true);
                     clearTimeout(scrollTimeout);
                     scrollTimeout = setTimeout(function () {
                         $inner.removeClass('scrolling');
-                    }, 1000);
+                    }, 100);
                 }
 
             });

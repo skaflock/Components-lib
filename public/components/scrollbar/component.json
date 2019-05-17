@@ -5,7 +5,13 @@
     "htmlView" : "/components/scrollbar/scrollbar-view.html",
     "html" : "/components/scrollbar/scrollbar.html",
     "scss" : "/components/scrollbar/scrollbar.scss",
-    "js" : "/components/scrollbar/scrollbar.js"
+    "js" : "/components/scrollbar/scrollbar.js",
+    "dependencies" : [
+      {
+        "name" : "Dragdealer",
+        "link" : "http://skidding.github.io/dragdealer/"
+      }
+    ]
   }
 }
 

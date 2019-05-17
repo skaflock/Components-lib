@@ -13,6 +13,7 @@ html {
 
 body {
     font-family: $font;
+    font-size: 16px;
     background: $c-white;
 }
 
@@ -39,26 +40,29 @@ ul {
 }
 
 h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
+    margin-bottom: 1.5rem;
     line-height: 1;
-    color: $c-black;
+    font-size: 1.5rem;
     font-weight: 700;
+    color: $c-black;
+
     @media (max-width: $sm-point) {
-        margin-bottom: 12px;
+        margin-bottom: 1rem;
     }
 }
 
 h2 {
     margin-top: 0;
-    margin-bottom: 32px;
-    font-size: 30px;
-    line-height: 32px;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
 }
 
 .test-row {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
+
     .test-item:last-child {
         margin-right: 0;
     }

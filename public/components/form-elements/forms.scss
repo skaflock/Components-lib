@@ -1,11 +1,4 @@
-$c-black: #121721;
-$c-green: #11b267;
-$c-red: #ff013d;
-$c-grey: #e1e1e1;
-$c-grey-dark: #c1c1c1;
-$c-grey-dark-8: #888888;
-$formControlHeight: 40px;
-$formControlPadding: 15px;
+@import '../../styles/scss/variables.scss';
 
 .form-group {
     position: relative;
@@ -30,7 +23,7 @@ $formControlPadding: 15px;
         margin-bottom: 2px;
         font-size: 14px;
         line-height: 18px;
-        color: $c-grey-dark-8;
+        color: $c-grey-8;
         @media all and (max-width: 767px) {
             font-size: 14px;
             line-height: 14px;
@@ -88,8 +81,8 @@ $formControlPadding: 15px;
 
 .form-control {
     width: 100%;
-    height: $formControlHeight;
-    padding: 0 $formControlPadding;
+    height: $form-control-height;
+    padding: 0 $form-control-padding;
     border-radius: 4px;
     border: 1px solid $c-grey;
     font-size: 16px;
@@ -160,7 +153,7 @@ $formControlPadding: 15px;
     }
     &.disabled {
         label {
-            color: $c-grey-dark-8;
+            color: $c-grey-8;
             a {
                 color: currentColor;
             }

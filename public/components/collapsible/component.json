@@ -1,11 +1,18 @@
 {
   "stepper" : {
-    "name" : "Сворачиваемый блок",
-    "category" : "Collapsible",
+    "name" : "Альтернативный спойлер",
+    "category" : "Spoilers",
     "htmlView" : "/components/collapsible/collapsible-view.html",
     "html" : "/components/collapsible/collapsible.html",
     "scss" : "/components/collapsible/collapsible.scss",
-    "js" : "/components/collapsible/collapsible.js"
+    "js" : "/components/collapsible/collapsible.js",
+    "dependencies" : [
+      {
+        "name" : "jQuery",
+        "link" : "https://jquery.com/download/"
+      }
+    ]
+
   }
 }
 

@@ -1,21 +1,29 @@
-.collapsible {
-    &-toggle {
-        &::before {
-            content: attr(data-text-collapse);
-        }
-    }
+@import '../../styles/scss/variables.scss';
 
-    .collapsed &-toggle {
-        &::before {
-            content: attr(data-text-expand);
-        }
+.collapsible {
+    &-wrap {
+        overflow: hidden;
     }
 
     &-content {
         overflow: hidden;
+        background-color: $c-grey-light;
         transition: margin .2s;
-        p:first-child {
-            margin-top: 0;
+
+        &.partial {
+            min-height: 100px;
+        }
+    }
+
+    &-toggle {
+        &::before {
+            content: attr(data-text-collapse);
+        }
+
+        &.collapsed {
+            &::before {
+                content: attr(data-text-expand);
+            }
         }
     }
 }
